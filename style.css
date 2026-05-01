@@ -1,133 +1,58 @@
-/* Reset Dasar */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    color: #333;
-    line-height: 1.6;
-    background-color: #fff;
-}
-
-/* Navigasi */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 10%;
-    background: #fff;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 4px;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li {
-    margin-left: 2rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+/* Container Utama */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* Hero Section */
 .hero {
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
-    background-color: #f9f9f9; /* Nanti bisa diganti gambar background */
-    padding: 0 10%;
+    padding: 60px 0;
+    background: #f9f9f9;
+    margin-bottom: 40px;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    font-weight: 300;
-    margin-bottom: 1rem;
-}
-
-.btn-main {
-    display: inline-block;
-    margin-top: 2rem;
-    padding: 1rem 2.5rem;
-    background: #000;
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-/* Collection */
-.collection {
-    padding: 5rem 10%;
-    text-align: center;
-}
-
-.collection h2 {
-    margin-bottom: 3rem;
-    letter-spacing: 3px;
-    font-weight: 400;
-}
-
+/* Grid System */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    gap: 30px;
 }
 
-.product-card {
-    background: #fff;
-    padding: 1rem;
-    transition: 0.3s;
+/* Placeholder Gambar */
+.product-image-placeholder {
+    width: 100%;
+    height: 300px;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-weight: bold;
+    border-radius: 4px;
 }
 
-.product-image {
-    background: #eeeeee; /* Warna sementara pengganti foto produk */
-    height: 350px;
-    margin-bottom: 1.5rem;
+.product-info {
+    padding: 15px 0;
+    text-align: left;
 }
 
-.product-card h3 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
+.price {
+    font-weight: bold;
+    color: #333;
 }
 
 .btn-buy {
-    display: block;
-    margin-top: 1rem;
-    padding: 0.8rem;
-    border: 1px solid #000;
-    color: #000;
-    text-decoration: none;
-    font-size: 0.7rem;
+    width: 100%;
+    padding: 10px;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
     transition: 0.3s;
 }
 
 .btn-buy:hover {
-    background: #000;
-    color: #fff;
-}
-
-footer {
-    text-align: center;
-    padding: 3rem;
-    font-size: 0.8rem;
-    color: #999;
+    background: #444;
 }
