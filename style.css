@@ -24,7 +24,7 @@ body {
 
 /* --- Header & Navbar --- */
 .site-header {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.95); /* Sedikit transparan agar lebih elegan */
     border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
@@ -83,7 +83,7 @@ body {
     background-color: #000;
     color: #fff !important;
     padding: 10px 20px;
-    border-radius: 2px; /* Border radius minimal */
+    border-radius: 2px; 
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 500;
@@ -113,40 +113,54 @@ body {
 .dropdown-content a:hover { background-color: #f9f9f9; }
 .dropdown:hover .dropdown-content { display: block; }
 
-/* --- Hero Section --- */
+/* --- Hero Section (Update dengan Gambar) --- */
 .hero-elegant {
-    padding: 120px 0;
+    position: relative;
+    padding: 160px 0; /* Padding ditambah agar gambar lebih terlihat */
     text-align: center;
-    background-color: #f9f9f7; /* Sedikit berbeda dari background utama */
+    /* Menambahkan overlay gradasi agar teks tetap terbaca meskipun gambar berwarna terang */
+    background: linear-gradient(rgba(253, 253, 252, 0.7), rgba(253, 253, 252, 0.7)), 
+                url('watermarked_img_15150360413248779728.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efek scroll halus */
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-text {
+    width: 100%;
 }
 
 .hero-text h1 {
     font-family: var(--font-heading);
-    font-size: 48px;
+    font-size: 56px; /* Ukuran font ditingkatkan untuk kesan mewah */
     font-weight: 400;
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    color: var(--text-color);
 }
 
 .hero-text .sub-title {
-    font-size: 12px;
+    font-size: 13px;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     color: var(--accent-color);
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .hero-text p {
-    font-size: 18px;
+    font-size: 19px;
     color: var(--accent-color);
-    max-width: 600px;
-    margin: 0 auto 40px;
+    max-width: 650px;
+    margin: 0 auto 45px;
 }
 
 .btn-elegant {
     display: inline-block;
-    padding: 15px 40px;
+    padding: 16px 45px;
     border: 1px solid #000;
     color: #000;
     text-decoration: none;
@@ -154,6 +168,7 @@ body {
     font-size: 14px;
     letter-spacing: 2px;
     transition: all 0.3s ease;
+    background-color: transparent;
 }
 
 .btn-elegant:hover {
@@ -161,7 +176,8 @@ body {
     color: #fff;
 }
 
-/* --- Collection Section --- */
+/* --- Bagian Lainnya Tetap Sama --- */
+
 .collection-section { padding: 100px 0; }
 
 .section-header-elegant {
@@ -182,7 +198,6 @@ body {
     margin: 0 auto;
 }
 
-/* --- Product Grid --- */
 .product-grid-elegant {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -261,7 +276,6 @@ body {
     font-weight: 500;
 }
 
-/* --- Footer --- */
 .site-footer {
     background-color: #f9f9f7;
     padding: 60px 0;
