@@ -1,32 +1,74 @@
-<main class="container">
-    <section class="hero">
-        <h1>SØREN APPAREL</h1>
-        <p>Limitless potential through minimalist design. Choose your own comfyness.</p>
-    </section>
-
-    <div class="filter-bar">
-        <button class="active">Semua</button>
-        <button>Kaos Polos</button>
-        <button>Oversized</button>
-    </div>
-
-    <div class="product-grid" id="catalog">
-        <div class="product-card">
-            <div class="product-image-placeholder">Produk 1</div>
-            <div class="product-info">
-                <h3>Kaos Polos Combed 30s</h3>
-                <p class="price">Rp 125.000</p>
-                <button class="btn-buy">Lihat Detail</button>
+<nav class="navbar">
+    <div class="logo">SØREN</div>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li class="dropdown">
+            <a href="#">Produk ▾</a>
+            <div class="dropdown-content">
+                <a href="#">Kaos Polos Premium</a>
+                <a href="#">Streetwear Series</a>
+                <a href="#">Oversized Fit</a>
             </div>
-        </div>
+        </li>
+        <li><a href="#">Cek Stok</a></li>
+        <li><a href="#">Size Chart</a></li>
+        <li><a href="#" class="btn-portal">Member Portal</a></li>
+    </ul>
+</nav>
 
-        <div class="product-card">
-            <div class="product-image-placeholder">Produk 2</div>
-            <div class="product-info">
-                <h3>Oversized Streetwear</h3>
-                <p class="price">Rp 175.000</p>
-                <button class="btn-buy">Lihat Detail</button>
-            </div>
+<header class="hero">
+    <div class="hero-content">
+        <h1>Limitless potential through minimalist design.</h1>
+        <p>Inspirasi bahan premium untuk kenyamanan tanpa batas.</p>
+        <div class="hero-buttons">
+            <a href="#shop" class="btn-primary">Belanja Sekarang</a>
+            <a href="#" class="btn-secondary">Download Price List</a>
         </div>
     </div>
-</main>
+</header>
+
+<section id="shop" class="container">
+    <div class="section-header">
+        <h2 class="section-title">Koleksi Pilihan</h2>
+        <div class="filter-tags">
+            <span class="tag active">Semua</span>
+            <span class="tag">Cotton Combed 30s</span>
+            <span class="tag">Heavyweight 20s</span>
+        </div>
+    </div>
+
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="badge">Best Seller</div>
+            <div class="product-img-box">
+                <img src="kaos-hitam.jpg" alt="Essential Goods">
+            </div>
+            <div class="product-detail">
+                <span class="category">Kaos Polos</span>
+                <h3>Søren Essential Tee Black</h3>
+                <p class="specs">Bahan: Cotton Combed 30s Premium</p>
+                <p class="price">Rp 149.000</p>
+                <div class="action-buttons">
+                    <a href="#" class="btn-wa">WhatsApp</a>
+                    <a href="#" class="btn-shopee">Shopee</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="product-img-box">
+                <img src="kaos-oversize.jpg" alt="Signature Series">
+            </div>
+            <div class="product-detail">
+                <span class="category">Streetwear</span>
+                <h3>Søren Boxy Fit Heavyweight</h3>
+                <p class="specs">Bahan: Cotton Combed 20s</p>
+                <p class="price">Rp 189.000</p>
+                <div class="action-buttons">
+                    <a href="#" class="btn-wa">WhatsApp</a>
+                    <a href="#" class="btn-shopee">Shopee</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
