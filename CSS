@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+nav {
+    padding: 2rem;
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: 600;
+}
+
+.hero {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    background-color: #f9f9f9;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-style: italic;
+    color: #888;
+}
+
+.section-title {
+    text-align: center;
+    margin: 4rem 0 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.product-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.product-card {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    border-color: #000;
+}
+
+.product-img {
+    width: 100%;
+    height: 300px;
+    background-color: #efefef; /* Placeholder warna abu-abu */
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+footer {
+    text-align: center;
+    padding: 4rem 0;
+    font-size: 0.8rem;
+    color: #aaa;
+}
