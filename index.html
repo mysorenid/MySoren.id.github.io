@@ -5,39 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Søren | Limitless Potential</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">SØREN</div>
-    </nav>
-
-    <!-- Hero Section / Brand Intro -->
-    <header class="hero">
-        <h1>Limitless potential through minimalist design.</h1>
-        <p class="tagline">choose your own comfyness</p>
+    <header>
+        <nav class="navbar">
+            <div class="logo">SØREN</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Product Section -->
-    <section id="shop">
-        <h2 class="section-title">Our Collection</h2>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Limitless potential through minimalist design.</h1>
+            <p>Choose your own comfyness.</p>
+            <a href="#collection" class="btn-main">Explore Collection</a>
+        </div>
+    </section>
+
+    <section id="collection" class="collection">
+        <h2>OUR COLLECTION</h2>
         <div class="product-grid">
-            <!-- Product 1 -->
             <div class="product-card">
-                <div class="product-img"></div> <!-- Ganti dengan tag <img src="..."> nanti -->
+                <div class="product-image"></div>
                 <h3>Essential Goods Vol. 1</h3>
                 <p>Rp 149.000</p>
-                <a href="#" class="btn">View on Shopee</a>
+                <a href="#" class="btn-buy">View on Shopee</a>
             </div>
-            
-            <!-- Product 2 -->
             <div class="product-card">
-                <div class="product-img"></div>
+                <div class="product-image"></div>
                 <h3>Søren Signature Series</h3>
                 <p>Rp 189.000</p>
-                <a href="#" class="btn">View on Shopee</a>
+                <a href="#" class="btn-buy">View on Shopee</a>
             </div>
         </div>
     </section>
