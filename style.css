@@ -435,3 +435,9 @@ body {
     cursor: pointer;
     font-weight: bold;
 }
+
+.size-btn.active {
+    background: #756a57 !important;
+    color: white !important;
+}
+
