@@ -1,149 +1,77 @@
-/* --- Hero Section (Updated with Background Image) --- */
-.hero-elegant {
-    position: relative;
-    padding: 160px 0;
-    text-align: center;
-    /* Menggunakan gambar yang kamu pilih sebagai background */
-    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), 
-                      url('watermarked_img_16401524210775700700.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
+/* Menghilangkan margin bawaan browser */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #C3B091;
 }
-
-.hero-text {
-    width: 100%;
-    z-index: 2;
-}
-
-.hero-text .sub-title {
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    color: var(--accent-color);
-    display: block;
-    margin-bottom: 15px;
-}
-
-.hero-text h1 {
-    font-family: var(--font-heading);
-    font-size: 52px;
-    font-weight: 400;
-    line-height: 1.2;
-    margin-bottom: 25px;
-    color: var(--text-color);
-}
-
-.hero-text p {
-    font-size: 19px;
-    color: var(--accent-color);
-    max-width: 650px;
-    margin: 0 auto 45px;
-}
-
-.btn-elegant {
-    display: inline-block;
-    padding: 16px 45px;
-    border: 1px solid #000;
-    color: #000;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 14px;
-    letter-spacing: 2px;
-    transition: all 0.3s ease;
-    background-color: transparent;
-}
-
-.btn-elegant:hover {
-    background-color: #000;
-    color: #fff;
-}
-/* Reset Dasar */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
-
-/* Container Navbar */
-.navbar {
-    display: flex;
-    justify-content: flex-start; /* Logo dan menu di kiri */
-    align-items: center;
-    padding: 15px 5%;
-    background: #fff;
-    border-bottom: 1px solid #eee;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-/* Logo SOREN */
 .logo {
-    font-size: 20px;
-    font-weight: 800;
-    letter-spacing: 4px;
-    margin-right: 50px; /* Jarak antara logo dan menu */
+font-weight: bold; /* ini untuk menebalkan tulisan*/
+font-size: 23px; 
+letter-spacing: 2px;
 }
 
-/* Nav Links */
+/* Style untuk Navbar */
+.navbar {
+  background-color: #756a57;
+  color: #f5f5dc;
+  display: flex;
+  justify-content: space-between; /* Logo di kiri, menu di kanan */
+  align-items: center;
+  padding: 10px 50px;
+}
+
+/* Menghilangkan titik-titik pada list dan buat berjajar */
 .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 25px;
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-links li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: 0.3s;
+/* Memberi jarak antar tombol menu */
+.nav-links li {
+  margin-left: 20px;
 }
 
-.nav-links li a:hover {
-    color: #888;
+/* Style untuk tulisan link */
+.nav-links a {
+  color: white;
+  text-decoration: none; /* Menghilangkan garis bawah */
+  font-weight: bold;
 }
 
-/* Dropdown Logic */
-.dropdown {
-    position: relative;
+/* Efek saat kursor menempel (hover) */
+.nav-links a:hover {
+  color: #F5F5DC; 
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    min-width: 180px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
-    top: 100%;
-    padding: 10px 0;
+.content {
+  text-align: center;
+  padding: 50px;
 }
 
-.dropdown-content a, .dropdown-content .intro {
-    padding: 10px 20px;
-    display: block;
-    font-size: 12px;
-    text-decoration: none;
-    color: #333;
+/* Update Navbar agar semua ke kiri */
+.navbar {
+  background-color: #756a57;
+  color: #f5f5dc;
+  display: flex;
+  justify-content: flex-start; /* Mengubah dari space-between ke flex-start */
+  align-items: center;
+  padding: 10px 50px;
 }
 
-.dropdown-content .intro {
-    font-weight: bold;
-    color: #000;
+/* Beri jarak sedikit untuk si pembatas */
+.separator {
+  margin: 0 15px; /* Jarak kiri dan kanan garis pembatas */
+  font-weight: 300; /* Garisnya dibuat lebih tipis agar estetik */
+  color: #f5f5dc;
+  opacity: 0.6; /* Membuat garis sedikit transparan */
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-hr {
-    border: 0;
-    border-top: 1px solid #eee;
-    margin: 5px 0;
+/* Pastikan nav-links tidak punya margin bawaan yang aneh */
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
