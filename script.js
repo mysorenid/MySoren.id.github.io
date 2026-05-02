@@ -1,23 +1,31 @@
+// Hero Slider Logic
 let slides = document.querySelectorAll('.slide');
 let dots = document.querySelectorAll('.dot');
-let currentStep = 0;
+let currentIdx = 0;
 
 function currentSlide(index) {
-    // Hilangkan semua status active
     slides.forEach(s => s.classList.remove('active'));
     dots.forEach(d => d.classList.remove('active'));
     
-    // Aktifkan slide yang dipilih
     slides[index].classList.add('active');
     dots[index].classList.add('active');
-    currentStep = index;
+    currentIdx = index;
 }
 
-// Slider otomatis setiap 5 detik
 setInterval(() => {
-    currentStep++;
-    if (currentStep >= slides.length) {
-        currentStep = 0;
-    }
-    currentSlide(currentStep);
+    currentIdx = (currentIdx + 1) % slides.length;
+    currentSlide(currentIdx);
 }, 5000);
+
+// Product Carousel Logic
+let track = document.querySelector('.product-track');
+let productIdx = 0;
+
+setInterval(() => {
+    productIdx++;
+    // Karena kita tampilkan 3 produk, dan total ada 4, maka max index geser adalah 1
+    if (productIdx > 1) { 
+        productIdx = 0;
+    }
+    track.style.transform = `translateX(-${productIdx * 33.33}%)`;
+}, 4000);
