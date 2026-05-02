@@ -117,9 +117,11 @@ body {
   text-align: center;
 }
 
-.product-track {
-  display: flex;
-  transition: transform 0.6s ease-in-out;
+.product-track, .category-wrapper {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 20px;
 }
 
 .product-card {
