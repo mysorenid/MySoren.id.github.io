@@ -13,14 +13,16 @@ body {
 
 /* --- Navigation --- */
 .navbar {
-    display: flex;
-    justify-content: space-between; /* Logo di kiri, Menu di kanan */
-    align-items: center;
-    padding: 15px 50px;
-    background-color: #756a57;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background-color: #756a57;
+  color: #f5f5dc;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .logo {
@@ -277,167 +279,3 @@ body {
   color: white;
   text-decoration: underline;
 }
-
-/* Container khusus untuk daftar produk di halaman baju.html */
-.product-grid-detail {
-    display: grid;
-    /* Membuat kolom otomatis: minimal 250px, maksimal mengisi ruang yang ada */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 40px 20px; /* Jarak antar baris 40px, antar kolom 20px */
-    padding: 50px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Memastikan kartu produk di halaman detail tetap simetris */
-.product-grid-detail .product-card {
-    min-width: unset; /* Menghapus aturan min-width dari slider utama */
-    width: 100%;
-    background: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-}
-
-.product-grid-detail .product-card:hover {
-    transform: translateY(-10px); /* Efek melayang sedikit saat kursor di atasnya */
-}
-
-.shop-container {
-  display: flex; /* Membuat sidebar dan produk berjajar */
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  gap: 30px;
-}
-
-.filter-sidebar {
-  width: 250px;
-  background: #fdfdfd;
-  padding: 20px;
-  border-radius: 8px;
-  height: fit-content;
-  position: sticky;
-  top: 90px; /* Agar ikut melayang saat scroll, di bawah navbar */
-}
-
-.filter-group {
-  margin-bottom: 25px;
-  text-align: left;
-}
-
-.filter-group h4 {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  color: #756a57;
-}
-
-.filter-group label {
-  display: block;
-  font-size: 0.85rem;
-  margin-bottom: 8px;
-  cursor: pointer;
-}
-
-.size-options {
-  display: flex;
-  gap: 5px;
-  flex-wrap: wrap;
-}
-
-.size-btn {
-  border: 1px solid #756a57;
-  background: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-size: 0.75rem;
-  transition: 0.3s;
-}
-
-.size-btn:hover {
-  background: #756a57;
-  color: white;
-}
-
-.btn-apply {
-  width: 100%;
-  padding: 10px;
-  background: #756a57;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.product-grid-detail .product-card img {
-    transition: transform 0.5s ease;
-}
-
-.product-grid-detail .product-card:hover img {
-    transform: scale(1.05); /* Zoom tipis saat dilihat */
-}
-
-/* Container pembungkus filter di Nav */
-.filter-dropdown {
-    position: relative; /* Menjadi patokan posisi popup */
-}
-
-/* Kotak Filter yang melayang */
-.filter-popup {
-    display: none;      /* Sembunyi awal */
-    position: absolute; /* INI KUNCINYA: Membuatnya melayang di atas konten */
-    top: 45px;          /* Muncul di bawah tombol filter */
-    right: 0;           /* Rata kanan dengan tombol */
-    background: white;
-    width: 250px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    z-index: 2000;      /* Di atas segalanya */
-    color: #333;
-    text-align: left;
-}
-
-/* Hapus spasi setelah titik */
-.filter-popup.show { 
-    display: block; 
-}
-
-@keyframes fadeInSlide {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Isi di dalam Filter */
-.filter-group h4 {
-    color: #756a57;
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-}
-
-.filter-group label {
-    display: block;
-    font-size: 0.85rem;
-    margin-bottom: 8px;
-    cursor: pointer;
-}
-
-.btn-apply {
-    width: 100%;
-    background: #756a57;
-    color: white;
-    border: none;
-    padding: 10px;
-    margin-top: 15px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.size-btn.active {
-    background: #756a57 !important;
-    color: white !important;
-}
-
