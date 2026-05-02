@@ -6,18 +6,18 @@
 }
 
 body {
-    font-family: 'Segoe UI', Roboto, sans-serif;
-    background-color: #C3B091; /* Warna Cream SØREN */
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #C3B091;
     color: #333;
 }
 
-/* Navbar: Logo di kiri, Menu di kanan */
+/* Navbar: Logo Kiri, Menu Kanan */
 .navbar {
-    background-color: #756a57;
-    padding: 15px 50px;
     display: flex;
     justify-content: space-between; 
     align-items: center;
+    padding: 20px 50px;
+    background-color: #756a57;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -27,14 +27,15 @@ body {
     color: #f5f5dc;
     text-decoration: none;
     font-weight: bold;
-    font-size: 23px;
+    font-size: 24px;
     letter-spacing: 2px;
 }
 
+/* Kunci agar menu berjajar horizontal */
 .nav-right {
     display: flex;
     list-style: none;
-    gap: 25px;
+    gap: 25px; /* Jarak antar menu */
 }
 
 .nav-right a {
@@ -48,15 +49,20 @@ body {
     color: #f5f5dc;
 }
 
-/* Hero & Content */
+/* Hero & Section Styling */
 .hero {
     text-align: center;
     padding: 100px 20px;
     background-color: #f5f5dc;
 }
 
+.hero h1 {
+    font-size: 50px;
+    letter-spacing: 10px;
+}
+
 .product-section {
-    padding: 50px;
+    padding: 60px 50px;
     text-align: center;
 }
 
@@ -72,7 +78,6 @@ body {
     background: white;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .product-card img {
