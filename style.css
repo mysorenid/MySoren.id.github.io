@@ -305,3 +305,70 @@ body {
 .product-grid-detail .product-card:hover {
     transform: translateY(-10px); /* Efek melayang sedikit saat kursor di atasnya */
 }
+
+.shop-container {
+  display: flex; /* Membuat sidebar dan produk berjajar */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 30px;
+}
+
+.filter-sidebar {
+  width: 250px;
+  background: #fdfdfd;
+  padding: 20px;
+  border-radius: 8px;
+  height: fit-content;
+  position: sticky;
+  top: 90px; /* Agar ikut melayang saat scroll, di bawah navbar */
+}
+
+.filter-group {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.filter-group h4 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #756a57;
+}
+
+.filter-group label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.size-options {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.size-btn {
+  border: 1px solid #756a57;
+  background: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: 0.3s;
+}
+
+.size-btn:hover {
+  background: #756a57;
+  color: white;
+}
+
+.btn-apply {
+  width: 100%;
+  padding: 10px;
+  background: #756a57;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
