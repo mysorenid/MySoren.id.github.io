@@ -5,6 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SØREN | Koleksi Baju</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS TAMBAHAN UNTUK MENGUNCI POSISI LOGO */
+        .navbar {
+            display: flex;
+            justify-content: space-between; /* Membuat Logo di kiri, Menu di kanan */
+            align-items: center;
+            padding: 15px 50px;
+            position: sticky;
+            top: 0;
+            background-color: #756a57;
+            z-index: 1000;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .filter-dropdown {
+            position: relative; /* Patokan untuk popup agar melayang */
+            margin-left: 20px;
+        }
+
+        /* INI KUNCINYA: Membuat filter melayang tanpa mendorong logo */
+        .filter-popup {
+            display: none;
+            position: absolute; 
+            top: 45px; 
+            right: 0; 
+            background: white;
+            width: 250px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            z-index: 9999;
+            color: #333;
+            text-align: left;
+        }
+
+        .filter-popup.show {
+            display: block;
+        }
+
+        .filter-btn-nav {
+            border: 1px solid white;
+            padding: 5px 15px;
+            border-radius: 4px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo a {
+            color: #f5f5dc;
+            text-decoration: none;
+            font-size: 23px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
@@ -14,80 +75,77 @@
             <span class="separator">|</span>
         </div>
         
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
+        <ul class="nav-right">
+            <li><a href="index.html" style="color: white; text-decoration: none; font-weight: bold;">Home</a></li>
             
             <li class="filter-dropdown">
                 <a href="javascript:void(0)" onclick="toggleFilter()" class="filter-btn-nav">Filter ▾</a>
                 
                 <div id="filterMenu" class="filter-popup">
-                    <div class="filter-group">
-                        <h4>Bahan Kain</h4>
-                        <label><input type="checkbox" name="bahan" value="cotton"> Cotton Combed</label>
-                        <label><input type="checkbox" name="bahan" value="linen"> Linen</label>
-                        <label><input type="checkbox" name="bahan" value="fleece"> Fleece</label>
+                    <div class="filter-group" style="margin-bottom: 15px;">
+                        <h4 style="color: #756a57; margin-bottom: 10px;">Bahan Kain</h4>
+                        <label style="display: block; margin-bottom: 5px;"><input type="checkbox"> Cotton Combed</label>
+                        <label style="display: block; margin-bottom: 5px;"><input type="checkbox"> Linen</label>
+                        <label style="display: block; margin-bottom: 5px;"><input type="checkbox"> Fleece</label>
                     </div>
 
                     <div class="filter-group">
-                        <h4>Ukuran</h4>
-                        <div class="size-options">
-                            <button class="size-btn">S</button>
-                            <button class="size-btn">M</button>
-                            <button class="size-btn">L</button>
-                            <button class="size-btn">XL</button>
-                        </div>
+                        <h4 style="color: #756a57; margin-bottom: 10px;">Ukuran</h4>
+                        <button style="padding: 5px 10px;">S</button>
+                        <button style="padding: 5px 10px;">M</button>
+                        <button style="padding: 5px 10px;">L</button>
                     </div>
 
-                    <button class="btn-apply" onclick="toggleFilter()">Terapkan Filter</button>
+                    <button onclick="toggleFilter()" style="width: 100%; background: #756a57; color: white; border: none; padding: 10px; margin-top: 15px; cursor: pointer;">Terapkan Filter</button>
                 </div>
             </li>
         </ul>
     </nav>
 
-    <section class="product-section">
-        <div class="container">
-            <h2>KOLEKSI BAJU</h2>
-            <div class="product-grid-detail">
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500" alt="Baju 1">
-                    <h3>Premium White Tee</h3>
-                    <p>Rp 150.000</p>
-                </div>
-
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=500" alt="Baju 2">
-                    <h3>Premium Black Shirt</h3>
-                    <p>Rp 185.000</p>
-                </div>
-
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1571945153237-4929e783ee4a?w=500" alt="Baju 3">
-                    <h3>Essential Gray Tee</h3>
-                    <p>Rp 145.000</p>
-                </div>
-
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=500" alt="Baju 4">
-                    <h3>Classic Linen Shirt</h3>
-                    <p>Rp 210.000</p>
-                </div>
+    <section class="product-section" style="padding: 50px 0; text-align: center;">
+        <h2>KOLEKSI BAJU</h2>
+        <div class="product-grid-detail">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500" alt="Baju 1">
+                <h3>Premium White Tee</h3>
+                <p>Rp 150.000</p>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=500" alt="Baju 2">
+                <h3>Premium Black Shirt</h3>
+                <p>Rp 185.000</p>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1571945153237-4929e783ee4a?w=500" alt="Baju 3">
+                <h3>Essential Gray Tee</h3>
+                <p>Rp 145.000</p>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=500" alt="Baju 4">
+                <h3>Classic Linen Shirt</h3>
+                <p>Rp 210.000</p>
             </div>
         </div>
     </section>
 
-    <footer class="footer" id="contact">
-        <div class="footer-container">
-            <div class="footer-info">
-                <p>&copy; 2024 SØREN. Est. 2024 - Crafting Limitless Potential.</p>
-            </div>
-            <div class="footer-links">
-                <a href="https://www.instagram.com/mysoren.id" target="_blank">Instagram</a>
-                <a href="https://id.shp.ee/Siqbk76Z" target="_blank">Shopee</a>
-                <a href="https://www.tiktok.com/@mysoren.id" target="_blank">TikTok</a>
-            </div>
-        </div>
-    </footer>
+    <script>
+        function toggleFilter() {
+            const menu = document.getElementById('filterMenu');
+            menu.classList.toggle('show');
+        }
 
-    <script src="script.js"></script>
+        // Tutup filter kalau klik di luar
+        window.onclick = function(event) {
+            if (!event.target.matches('.filter-btn-nav') && !event.target.closest('.filter-popup')) {
+                const dropdowns = document.getElementsByClassName("filter-popup");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    let openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 </html>
