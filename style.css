@@ -1,7 +1,7 @@
-/* 1. Navbar & Logo */
+/* 1. Kunci Navigasi agar Logo di Kiri & Menu di Kanan */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Ini yang bikin logo & menu tidak tabrakan */
     align-items: center;
     padding: 15px 50px;
     background-color: #756a57;
@@ -10,6 +10,7 @@
     z-index: 1000;
 }
 
+/* 2. Bungkus Menu di Kanan */
 .nav-right {
     display: flex;
     align-items: center;
@@ -18,25 +19,34 @@
     padding: 0;
 }
 
-.nav-right li { margin-left: 20px; }
-.nav-right a { color: white; text-decoration: none; font-weight: bold; }
+.nav-right li {
+    margin-left: 20px;
+}
 
-/* 2. Filter Dropdown */
-.filter-dropdown { position: relative; }
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 3. Dropdown Filter (Kunci agar Popup Melayang) */
+.filter-dropdown {
+    position: relative; /* Menjadi titik patokan popup */
+}
 
 .filter-btn-nav {
     border: 1px solid white;
     padding: 5px 15px;
     border-radius: 4px;
     cursor: pointer;
-    color: white;
 }
 
+/* 4. Popup Filter (Absolute: Melayang tanpa mendorong logo) */
 .filter-popup {
-    display: none; 
-    position: absolute;
-    top: 45px;
-    right: 0;
+    display: none;      /* Sembunyi awal */
+    position: absolute; /* Melayang di atas konten lain */
+    top: 45px;          /* Jarak dari tombol filter */
+    right: 0;           /* Rata kanan dengan tombol */
     background: white;
     width: 250px;
     padding: 20px;
@@ -47,13 +57,23 @@
     text-align: left;
 }
 
-/* PERBAIKAN FATAL: Tidak boleh ada spasi di antara titik dan kata show */
+/* PERBAIKAN: Tidak boleh ada spasi antara .filter-popup dan .show */
 .filter-popup.show {
     display: block;
 }
 
-/* 3. Size Button */
-.size-options { display: flex; gap: 5px; margin-bottom: 15px; }
+/* 5. Styling Elemen di Dalam Filter */
+.filter-group h4 {
+    color: #756a57;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.size-options {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+}
 
 .size-btn {
     border: 1px solid #756a57;
@@ -63,7 +83,7 @@
     transition: 0.3s;
 }
 
-/* PERBAIKAN FATAL: Tidak boleh ada spasi di antara titik dan kata active */
+/* Efek saat Size dipilih */
 .size-btn.active {
     background: #756a57;
     color: white;
