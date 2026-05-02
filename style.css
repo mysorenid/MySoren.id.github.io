@@ -1,19 +1,18 @@
-/* --- Global Reset --- */
+/* --- Reset & Base --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: 'Urbanist', sans-serif;
-    background-color: #C3B091;
+    background-color: #C3B091; /* Warna khas SØREN */
     color: #333;
-    line-height: 1.6;
 }
 
-/* --- Navbar (Stabilizer) --- */
+/* --- Navbar (Kunci Agar Tidak Berantakan) --- */
 .navbar {
     display: flex;
-    justify-content: space-between; /* Kunci Logo di kiri, Menu di kanan */
+    justify-content: space-between; /* Logo kiri, Menu kanan */
     align-items: center;
-    padding: 15px 50px;
+    padding: 20px 50px;
     background-color: #756a57;
     position: sticky;
     top: 0;
@@ -29,46 +28,52 @@ body {
 }
 
 .nav-right {
-    display: flex;
-    align-items: center;
+    display: flex; /* Membuat menu menyamping */
     list-style: none;
+    gap: 25px; /* Jarak antar menu */
 }
 
-.nav-right li { margin-left: 25px; }
-.nav-right a { color: white; text-decoration: none; font-weight: bold; transition: 0.3s; }
-.nav-right a:hover { color: #f5f5dc; }
-
-/* --- Filter Popup (Floating) --- */
-.filter-dropdown { position: relative; }
-.filter-btn-nav { border: 1px solid white; padding: 5px 15px; border-radius: 4px; cursor: pointer; }
-
-.filter-popup {
-    display: none;
-    position: absolute;
-    top: 45px;
-    right: 0;
-    background: white;
-    width: 250px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    z-index: 9999;
+.nav-right a {
+    color: #f5f5dc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-/* Fix: Tidak boleh ada spasi */
-.filter-popup.show { display: block; }
+.nav-right a:hover {
+    opacity: 0.7;
+}
 
-.size-btn { border: 1px solid #756a57; background: white; padding: 5px 10px; cursor: pointer; margin: 2px; }
-.size-btn.active { background: #756a57; color: white; }
+/* --- Content Styling --- */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f5f5dc;
+}
 
-/* --- Layout Produk --- */
-.product-section { padding: 60px 50px; text-align: center; }
+.product-section {
+    padding: 60px 50px;
+    text-align: center;
+}
+
 .product-grid-detail {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    margin-top: 40px;
+    max-width: 1200px;
+    margin: 40px auto 0;
 }
 
-.product-card { background: white; padding: 20px; border-radius: 12px; transition: 0.3s; }
-.product-card img { width: 100%; height: 350px; object-fit: cover; border-radius: 8px; }
+.product-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.product-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+}
