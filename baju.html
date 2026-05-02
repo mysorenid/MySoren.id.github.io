@@ -5,12 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SØREN | Koleksi Baju</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS KHUSUS UNTUK NAVIGASI DAN FILTER */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            position: sticky;
+            top: 0;
+            background-color: #756a57;
+            z-index: 1000;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-right li { margin-left: 20px; }
+        .nav-right a { color: white; text-decoration: none; font-weight: bold; }
+
+        .filter-dropdown { position: relative; }
+
+        .filter-btn-nav {
+            border: 1px solid white;
+            padding: 5px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* POPUP FILTER MELAYANG */
+        .filter-popup {
+            display: none;
+            position: absolute;
+            top: 45px;
+            right: 0;
+            background: white;
+            width: 250px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            z-index: 9999;
+            color: #333;
+            text-align: left;
+        }
+
+        .filter-popup.show { display: block; }
+
+        .filter-group h4 { color: #756a57; margin-bottom: 10px; }
+
+        /* SIZE BUTTON */
+        .size-options { display: flex; gap: 5px; margin-bottom: 15px; }
+        .size-btn {
+            border: 1px solid #756a57;
+            background: white;
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .size-btn.active { background: #756a57; color: white; }
+
+        .btn-apply {
+            width: 100%;
+            background: #756a57;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* PRODUCT GRID */
+        .product-grid-detail {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px 50px;
+        }
+    </style>
 </head>
 <body>
 
     <nav class="navbar">
         <div class="logo">
-            <a href="index.html">SØREN</a>
+            <a href="index.html" style="color: #f5f5dc; text-decoration: none; font-weight: bold; font-size: 23px;">SØREN</a>
             <span class="separator">|</span>
         </div>
         
@@ -22,9 +104,9 @@
                 <div id="filterMenu" class="filter-popup">
                     <div class="filter-group">
                         <h4>Bahan Kain</h4>
-                        <label><input type="checkbox" class="filter-bahan" value="cotton"> Cotton Combed</label>
-                        <label><input type="checkbox" class="filter-bahan" value="linen"> Linen</label>
-                        <label><input type="checkbox" class="filter-bahan" value="fleece"> Fleece</label>
+                        <label style="display: block;"><input type="checkbox" class="filter-bahan" value="cotton"> Cotton Combed</label>
+                        <label style="display: block;"><input type="checkbox" class="filter-bahan" value="linen"> Linen</label>
+                        <label style="display: block;"><input type="checkbox" class="filter-bahan" value="fleece"> Fleece</label>
                     </div>
 
                     <div class="filter-group" style="margin-top: 15px;">
@@ -42,29 +124,82 @@
         </ul>
     </nav>
 
-    <section class="product-section">
+    <section class="product-section" style="text-align: center; padding-top: 40px;">
         <h2>KOLEKSI BAJU</h2>
         <div class="product-grid-detail">
             <div class="product-card" data-bahan="cotton" data-size="S M">
                 <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500" alt="Baju 1">
-                <h3>Premium White Tee</h3>
+                <h3>PREMIUM WHITE TEE</h3>
                 <p>Rp 150.000</p>
             </div>
 
-            <div class="product-card" data-bahan="linen" data-size="L">
-                <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=500" alt="Baju 2">
-                <h3>Classic Linen Shirt</h3>
-                <p>Rp 210.000</p>
+            <div class="product-card" data-bahan="cotton" data-size="M L">
+                <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=500" alt="Baju 2">
+                <h3>PREMIUM BLACK SHIRT</h3>
+                <p>Rp 185.000</p>
             </div>
 
-            <div class="product-card" data-bahan="fleece" data-size="M L">
+            <div class="product-card" data-bahan="fleece" data-size="L">
                 <img src="https://images.unsplash.com/photo-1571945153237-4929e783ee4a?w=500" alt="Baju 3">
-                <h3>Essential Gray Tee</h3>
+                <h3>ESSENTIAL GRAY TEE</h3>
                 <p>Rp 145.000</p>
+            </div>
+
+            <div class="product-card" data-bahan="linen" data-size="S L">
+                <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=500" alt="Baju 4">
+                <h3>CLASSIC LINEN SHIRT</h3>
+                <p>Rp 210.000</p>
             </div>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <script>
+        // BUKA TUTUP MENU FILTER
+        function toggleFilter() {
+            document.getElementById('filterMenu').classList.toggle('show');
+        }
+
+        // SELEKSI UKURAN (SIZE)
+        const sizeBtns = document.querySelectorAll('.size-btn');
+        sizeBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+
+        // FUNGSI FILTER UTAMA
+        function terapkanFilter() {
+            const bahanDiceklis = Array.from(document.querySelectorAll('.filter-bahan:checked')).map(cb => cb.value);
+            const sizeDipilih = Array.from(document.querySelectorAll('.size-btn.active')).map(btn => btn.dataset.size);
+            const daftarProduk = document.querySelectorAll('.product-card');
+
+            daftarProduk.forEach(produk => {
+                const bahanProduk = produk.dataset.bahan;
+                const sizeProduk = produk.dataset.size;
+
+                // Logika Filter Bahan
+                const matchBahan = bahanDiceklis.length === 0 || bahanDiceklis.includes(bahanProduk);
+                
+                // Logika Filter Size
+                const matchSize = sizeDipilih.length === 0 || sizeDipilih.some(s => sizeProduk.includes(s));
+
+                if (matchBahan && matchSize) {
+                    produk.style.display = "block";
+                } else {
+                    produk.style.display = "none";
+                }
+            });
+
+            // Tutup menu setelah klik terapkan
+            toggleFilter();
+        }
+
+        // TUTUP FILTER JIKA KLIK DI LUAR
+        window.onclick = function(event) {
+            if (!event.target.matches('.filter-btn-nav') && !event.target.closest('.filter-popup')) {
+                document.getElementById('filterMenu').classList.remove('show');
+            }
+        }
+    </script>
 </body>
 </html>
