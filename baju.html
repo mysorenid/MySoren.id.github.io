@@ -91,15 +91,22 @@
 <body>
 
     <nav class="navbar">
-        <div class="logo">
-            <a href="index.html" style="color: #f5f5dc; text-decoration: none; font-weight: bold; font-size: 23px;">SØREN</a>
-            <span class="separator">|</span>
-        </div>
-        
-        <ul class="nav-right">
-            <li><a href="index.html">Home</a></li>
-            <li class="filter-dropdown">
-                <a href="javascript:void(0)" onclick="toggleFilter()" class="filter-btn-nav">Filter ▾</a>
+    <div class="logo"><a href="index.html">SØREN</a></div>
+    <ul class="nav-right">
+        <li><a href="index.html">Home</a></li>
+        <li class="filter-dropdown">
+            <a href="javascript:void(0)" onclick="toggleFilter()" class="filter-btn-nav">Filter ▾</a>
+            <div id="filterMenu" class="filter-popup">
+                <div class="filter-group">
+                    <h4>Pilihan</h4>
+                    <label><input type="checkbox" class="filter-bahan" value="linen"> Linen</label>
+                    <label><input type="checkbox" class="filter-bahan" value="cotton"> Cotton</label>
+                </div>
+                <button class="btn-apply" onclick="terapkanFilter()">Terapkan</button>
+            </div>
+        </li>
+    </ul>
+</nav>
                 
                 <div id="filterMenu" class="filter-popup">
                     <div class="filter-group">
