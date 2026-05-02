@@ -381,27 +381,30 @@ body {
     transform: scale(1.05); /* Zoom tipis saat dilihat */
 }
 
-/* Styling Dropdown Filter di Nav */
+/* Kunci posisi filter */
 .filter-dropdown {
-    position: relative; /* Ini wajib agar pop-up patokan posisinya ke sini */
+    position: relative; /* Menjadi patokan bagi popup */
+    display: inline-block;
 }
 
 .filter-popup {
-    display: none; 
-    position: absolute; /* Membuatnya melayang tanpa mendorong logo/menu lain */
-    top: 45px;         /* Muncul tepat di bawah tombol Filter */
-    right: 0;          /* Rata kanan dengan tombol filter */
+    display: none;      /* Sembunyi default */
+    position: absolute; /* MELAYANG: agar tidak menggeser logo */
+    top: 40px;          /* Jarak dari tombol filter */
+    right: 0;           /* Rata kanan dengan tombol filter */
     background: white;
     width: 250px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    z-index: 9999;     /* Pastikan di atas gambar produk */
+    z-index: 9999;
     color: #333;
+    text-align: left;
 }
 
+/* Munculkan saat class 'show' ada */
 .filter-popup.show {
-    display: block; /* Munculkan saat class 'show' aktif */
+    display: block;
 }
 
 @keyframes fadeInSlide {
