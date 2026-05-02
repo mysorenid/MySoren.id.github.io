@@ -33,3 +33,19 @@ setInterval(() => {
   
   track.style.transform = `translateX(-${productIndex * 33.33}%)`;
 }, 4000);
+
+// Fungsi Buka-Tutup Pop-up Filter
+function toggleFilter() {
+    const filterMenu = document.getElementById('filterMenu');
+    filterMenu.classList.toggle('show');
+}
+
+// Menutup filter jika user klik di luar area menu
+window.onclick = function(event) {
+    const filterMenu = document.getElementById('filterMenu');
+    const filterBtn = document.querySelector('.filter-btn-nav');
+    
+    if (!filterBtn.contains(event.target) && !filterMenu.contains(event.target)) {
+        filterMenu.classList.remove('show');
+    }
+}
