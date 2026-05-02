@@ -1,19 +1,18 @@
-/* --- Reset & Base --- */
+/* --- Reset Dasar --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: 'Urbanist', sans-serif;
-    background-color: #C3B091; /* Warna khas SØREN */
-    color: #333;
+    background-color: #C3B091; /* Warna Cream SØREN */
 }
 
-/* --- Navbar (Kunci Agar Tidak Berantakan) --- */
+/* --- Navbar (Kunci Utama) --- */
 .navbar {
     display: flex;
     justify-content: space-between; /* Logo kiri, Menu kanan */
     align-items: center;
-    padding: 20px 50px;
-    background-color: #756a57;
+    padding: 15px 50px;
+    background-color: #756a57; /* Warna Khaki SØREN */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -24,35 +23,30 @@ body {
     text-decoration: none;
     font-weight: bold;
     font-size: 24px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 .nav-right {
-    display: flex; /* Membuat menu menyamping */
+    display: flex; /* Membuat menu horizontal */
     list-style: none;
-    gap: 25px; /* Jarak antar menu */
+    gap: 25px;
 }
 
 .nav-right a {
-    color: #f5f5dc;
+    color: white;
     text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.nav-right a:hover {
-    opacity: 0.7;
+    font-weight: bold;
 }
 
 /* --- Content Styling --- */
 .hero {
     text-align: center;
-    padding: 80px 20px;
+    padding: 100px 20px;
     background-color: #f5f5dc;
 }
 
 .product-section {
-    padding: 60px 50px;
+    padding: 50px;
     text-align: center;
 }
 
@@ -61,14 +55,13 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     max-width: 1200px;
-    margin: 40px auto 0;
+    margin: 0 auto;
 }
 
 .product-card {
     background: white;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 .product-card img {
