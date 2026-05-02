@@ -37,15 +37,16 @@ setInterval(() => {
 // Fungsi Buka-Tutup Pop-up Filter
 function toggleFilter() {
     const filterMenu = document.getElementById('filterMenu');
+    // Toggle class 'show' untuk buka/tutup
     filterMenu.classList.toggle('show');
 }
 
-// Menutup filter jika user klik di luar area menu
-window.onclick = function(event) {
+// Menutup filter otomatis jika klik di luar area menu
+window.addEventListener('click', function(event) {
     const filterMenu = document.getElementById('filterMenu');
     const filterBtn = document.querySelector('.filter-btn-nav');
     
     if (!filterBtn.contains(event.target) && !filterMenu.contains(event.target)) {
         filterMenu.classList.remove('show');
     }
-}
+});
