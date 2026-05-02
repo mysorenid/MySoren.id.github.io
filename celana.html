@@ -18,13 +18,14 @@
             <li><a href="index.html">Home</a></li>
             <li class="filter-dropdown">
                 <a href="javascript:void(0)" onclick="toggleFilter()" class="filter-btn-nav">Filter ▾</a>
+                
                 <div id="filterMenu" class="filter-popup">
                     <div class="filter-group">
                         <h4>Bahan</h4>
-                        <label><input type="checkbox" class="filter-bahan" value="chino"> Chino Cotton</label>
+                        <label><input type="checkbox" class="filter-bahan" value="chino"> Cotton Chino</label>
                         <label><input type="checkbox" class="filter-bahan" value="denim"> Denim</label>
-                        <label><input type="checkbox" class="filter-bahan" value="corduroy"> Corduroy</label>
                     </div>
+
                     <div class="filter-group" style="margin-top: 15px;">
                         <h4>Ukuran</h4>
                         <div class="size-options">
@@ -33,13 +34,14 @@
                             <button class="size-btn" data-size="32">32</button>
                         </div>
                     </div>
+
                     <button class="btn-apply" onclick="terapkanFilter()">Terapkan Filter</button>
                 </div>
             </li>
         </ul>
     </nav>
 
-    <section class="product-section" style="text-align: center; padding-top: 40px;">
+    <section class="product-section">
         <h2>KOLEKSI CELANA</h2>
         <div class="product-grid-detail">
             <div class="product-card" data-bahan="chino" data-size="28 30">
@@ -47,6 +49,7 @@
                 <h3>Slim Fit Chino</h3>
                 <p>Rp 299.000</p>
             </div>
+
             <div class="product-card" data-bahan="denim" data-size="30 32">
                 <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=500" alt="Celana 2">
                 <h3>Raw Denim Selvedge</h3>
