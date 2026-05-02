@@ -37,7 +37,6 @@ setInterval(() => {
 // Fungsi Buka-Tutup Pop-up Filter
 function toggleFilter() {
     const filterMenu = document.getElementById('filterMenu');
-    // Toggle class 'show' untuk buka/tutup
     filterMenu.classList.toggle('show');
 }
 
