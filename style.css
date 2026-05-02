@@ -57,7 +57,7 @@
     text-align: left;
 }
 
-/* PERBAIKAN: Tidak boleh ada spasi antara .filter-popup dan .show */
+/* Pastikan nempel titiknya: .filter-popup.show */
 .filter-popup.show {
     display: block;
 }
@@ -83,7 +83,7 @@
     transition: 0.3s;
 }
 
-/* Efek saat Size dipilih */
+/* Pastikan nempel titiknya: .size-btn.active */
 .size-btn.active {
     background: #756a57;
     color: white;
