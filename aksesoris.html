@@ -2,47 +2,34 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SØREN | Koleksi Aksesoris</title>
+    <title>SØREN | Koleksi Baju</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="logo">
-            <a href="index.html">SØREN</a>
-            <span class="separator">|</span>
-        </div>
-        
+        <div class="logo"><a href="index.html">SØREN</a></div>
         <ul class="nav-right">
             <li><a href="index.html">Home</a></li>
             <li class="filter-dropdown">
                 <a href="javascript:void(0)" onclick="toggleFilter()" class="filter-btn-nav">Filter ▾</a>
                 <div id="filterMenu" class="filter-popup">
-                    <div class="filter-group">
-                        <h4>Kategori</h4>
-                        <label><input type="checkbox" class="filter-bahan" value="topi"> Headwear</label>
-                        <label><input type="checkbox" class="filter-bahan" value="tas"> Bags</label>
-                        <label><input type="checkbox" class="filter-bahan" value="kacamata"> Eyewear</label>
-                    </div>
-                    <button class="btn-apply" onclick="terapkanFilter()">Terapkan Filter</button>
+                    <h4>Bahan</h4>
+                    <label style="display:block"><input type="checkbox" class="filter-bahan" value="cotton"> Cotton</label>
+                    <label style="display:block"><input type="checkbox" class="filter-bahan" value="linen"> Linen</label>
+                    <button onclick="terapkanFilter()" style="width:100%; margin-top:10px; background:#756a57; color:white; border:none; padding:8px; cursor:pointer;">Terapkan</button>
                 </div>
             </li>
         </ul>
     </nav>
 
-    <section class="product-section" style="text-align: center; padding-top: 40px;">
-        <h2>KOLEKSI AKSESORIS</h2>
+    <section class="product-section">
+        <h2>KOLEKSI BAJU</h2>
         <div class="product-grid-detail">
-            <div class="product-card" data-bahan="topi" data-size="All">
-                <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=500" alt="Aksesoris 1">
-                <h3>Minimalist Cap</h3>
-                <p>Rp 120.000</p>
-            </div>
-            <div class="product-card" data-bahan="tas" data-size="All">
-                <img src="https://images.unsplash.com/photo-1544816153-12ad5d713312?w=500" alt="Aksesoris 2">
-                <h3>Canvas Totebag</h3>
-                <p>Rp 185.000</p>
+            <div class="product-card" data-bahan="cotton" data-size="M">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500" alt="Baju">
+                <h3>Premium White Tee</h3>
+                <p>Rp 150.000</p>
             </div>
         </div>
     </section>
