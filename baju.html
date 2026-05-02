@@ -8,29 +8,25 @@
 </head>
 <body>
 
-   <nav class="navbar">
-    <div class="logo">
-        <a href="index.html">SØREN</a>
-        <span class="separator">|</span>
-    </div>
-    
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">SØREN</a>
+            <span class="separator">|</span>
+        </div>
         
-        <li class="filter-dropdown">
-            <a href="javascript:void(0)" onclick="toggleFilter()" class="filter-btn-nav">Filter ▾</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
             
-            <div id="filterMenu" class="filter-popup">
-                <div class="filter-group">
-                    <h4>Bahan Kain</h4>
-                    <label><input type="checkbox"> Cotton Combed</label>
-                    <label><input type="checkbox"> Linen</label>
-                </div>
-                <button class="btn-apply" onclick="toggleFilter()">Terapkan</button>
-            </div>
-        </li>
-    </ul>
-</nav>
+            <li class="filter-dropdown">
+                <a href="javascript:void(0)" onclick="toggleFilter()" class="filter-btn-nav">Filter ▾</a>
+                
+                <div id="filterMenu" class="filter-popup">
+                    <div class="filter-group">
+                        <h4>Bahan Kain</h4>
+                        <label><input type="checkbox" name="bahan" value="cotton"> Cotton Combed</label>
+                        <label><input type="checkbox" name="bahan" value="linen"> Linen</label>
+                        <label><input type="checkbox" name="bahan" value="fleece"> Fleece</label>
+                    </div>
 
                     <div class="filter-group">
                         <h4>Ukuran</h4>
@@ -50,8 +46,7 @@
 
     <section class="product-section">
         <div class="container">
-            <h2>Koleksi Baju</h2>
-            
+            <h2>KOLEKSI BAJU</h2>
             <div class="product-grid-detail">
                 <div class="product-card">
                     <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500" alt="Baju 1">
@@ -80,4 +75,19 @@
         </div>
     </section>
 
-    <footer class="footer
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>&copy; 2024 SØREN. Est. 2024 - Crafting Limitless Potential.</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/mysoren.id" target="_blank">Instagram</a>
+                <a href="https://id.shp.ee/Siqbk76Z" target="_blank">Shopee</a>
+                <a href="https://www.tiktok.com/@mysoren.id" target="_blank">TikTok</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
