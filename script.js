@@ -34,54 +34,46 @@ setInterval(() => {
   track.style.transform = `translateX(-${productIndex * 33.33}%)`;
 }, 4000);
 
-// Fungsi Buka-Tutup Pop-up Filter
+// Buka & Tutup Filter
 function toggleFilter() {
-    const filterMenu = document.getElementById('filterMenu');
-    filterMenu.classList.toggle('show');
+    const menu = document.getElementById('filterMenu');
+    menu.classList.toggle('show');
 }
 
-// Menutup filter otomatis jika klik di luar area menu
-window.addEventListener('click', function(event) {
-    const filterMenu = document.getElementById('filterMenu');
-    const filterBtn = document.querySelector('.filter-btn-nav');
-    
-    if (!filterBtn.contains(event.target) && !filterMenu.contains(event.target)) {
-        filterMenu.classList.remove('show');
+// Klik Size (Bisa pilih banyak)
+document.querySelectorAll('.size-btn').forEach(btn => {
+    btn.onclick = function() {
+        this.classList.toggle('active');
     }
 });
 
-function toggleFilter() {
-    document.getElementById('filterMenu').classList.toggle('show');
-}
-
-// Fungsi Utama untuk Memfilter Produk
+// Logika Filter Utama
 function terapkanFilter() {
-    // 1. Ambil bahan apa saja yang diceklis
-    const checkboxes = document.querySelectorAll('input[name="bahan"]:checked');
-    let bahanTerpilih = Array.from(checkboxes).map(cb => cb.value);
-
-    // 2. Ambil semua kartu produk
+    const bahanTerpilih = Array.from(document.querySelectorAll('.filter-bahan:checked')).map(cb => cb.value);
+    const sizeTerpilih = Array.from(document.querySelectorAll('.size-btn.active')).map(btn => btn.dataset.size);
     const produk = document.querySelectorAll('.product-card');
 
-    produk.forEach(item => {
-        let bahanProduk = item.getAttribute('data-bahan');
-        
-        // 3. Logika: Jika tidak ada yang diceklis, tampilkan semua. 
-        // Jika diceklis, tampilkan yang cocok saja.
-        if (bahanTerpilih.length === 0 || bahanTerpilih.includes(bahanProduk)) {
-            item.style.display = "block";
+    produk.forEach(p => {
+        const dataBahan = p.dataset.bahan;
+        const dataSize = p.dataset.size;
+
+        const matchBahan = bahanTerpilih.length === 0 || bahanTerpilih.includes(dataBahan);
+        const matchSize = sizeTerpilih.length === 0 || sizeTerpilih.some(s => dataSize.includes(s));
+
+        if (matchBahan && matchSize) {
+            p.style.display = "block";
         } else {
-            item.style.display = "none";
+            p.style.display = "none";
         }
     });
 
-    // Tutup menu setelah klik terapkan
-    toggleFilter();
+    toggleFilter(); // Tutup menu setelah klik
 }
 
-document.querySelectorAll('.size-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-        this.classList.toggle('active');
-    });
-});
-
+// Klik di luar untuk tutup
+window.onclick = function(event) {
+    if (!event.target.matches('.filter-btn-nav') && !event.target.closest('.filter-popup')) {
+        const popup = document.getElementById('filterMenu');
+        if (popup) popup.classList.remove('show');
+    }
+}
