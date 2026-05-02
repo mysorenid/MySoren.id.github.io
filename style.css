@@ -13,16 +13,14 @@ body {
 
 /* --- Navigation --- */
 .navbar {
-  background-color: #756a57;
-  color: #f5f5dc;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 10px 50px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between; /* Logo di kiri, Menu di kanan */
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #756a57;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
@@ -402,8 +400,9 @@ body {
     text-align: left;
 }
 
-.filter-popup.show {
-    display: block;     /* Muncul saat tombol diklik */
+/* Hapus spasi setelah titik */
+.filter-popup.show { 
+    display: block; 
 }
 
 @keyframes fadeInSlide {
