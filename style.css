@@ -1,36 +1,20 @@
-/* =========================================
-   1. GLOBAL & RESET
-   ========================================= */
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* Jarak agar saat scroll tidak tertutup navbar */
-}
-
+/* --- Global Style --- */
 body {
     margin: 0;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #C3B091; /* Warna khas SØREN */
-    color: #333;
+    font-family: 'Urbanist', sans-serif;
+    background-color: #C3B091; /* Warna Earth Tone SØREN */
 }
 
-/* =========================================
-   2. NAVBAR (NAVIGASI UTAMA)
-   ========================================= */
+/* --- Navbar Fixed (Logo Kiri, Menu Kanan) --- */
 .navbar {
     display: flex;
-    justify-content: space-between; /* KUNCINYA: Logo kiri, Menu kanan */
+    justify-content: space-between; /* Logo dipaksa ke kiri, Menu dipaksa ke kanan */
     align-items: center;
     padding: 15px 50px;
     background-color: #756a57;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.logo {
-    display: flex;
-    align-items: center;
 }
 
 .logo a {
@@ -39,27 +23,13 @@ body {
     font-weight: bold;
     font-size: 23px;
     letter-spacing: 2px;
-    transition: 0.3s;
 }
 
-.logo a:hover {
-    opacity: 0.8;
-}
-
-.separator {
-    margin: 0 15px;
-    color: #f5f5dc;
-    opacity: 0.6;
-    font-weight: 300;
-}
-
-/* Container menu sebelah kanan */
 .nav-right {
     display: flex;
     align-items: center;
     list-style: none;
     margin: 0;
-    padding: 0;
 }
 
 .nav-right li {
@@ -70,18 +40,11 @@ body {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
 }
 
-.nav-right a:hover {
-    color: #f5f5dc;
-}
-
-/* =========================================
-   3. FILTER DROPDOWN (POPUP)
-   ========================================= */
+/* --- Filter Dropdown (MELAYANG) --- */
 .filter-dropdown {
-    position: relative; /* Patokan posisi untuk si popup */
+    position: relative;
 }
 
 .filter-btn-nav {
@@ -91,23 +54,21 @@ body {
     cursor: pointer;
 }
 
-/* Kotak Filter yang melayang */
 .filter-popup {
     display: none;      /* Sembunyi awal */
-    position: absolute; /* MELAYANG: Tidak mendorong elemen lain */
-    top: 45px;          /* Muncul di bawah tombol */
-    right: 0;           /* Rata kanan */
+    position: absolute; /* MELAYANG: Agar tidak mendorong logo */
+    top: 45px;
+    right: 0;
     background: white;
     width: 250px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    z-index: 2000;
+    z-index: 9999;
     color: #333;
-    text-align: left;
 }
 
-/* PERBAIKAN: Harus nempel .filter-popup.show */
+/* KUNCI: Tidak boleh ada spasi di .filter-popup.show */
 .filter-popup.show {
     display: block;
 }
@@ -115,15 +76,8 @@ body {
 .filter-group h4 {
     color: #756a57;
     margin-bottom: 10px;
-    font-size: 0.9rem;
     text-transform: uppercase;
-}
-
-.filter-group label {
-    display: block;
-    font-size: 0.85rem;
-    margin-bottom: 8px;
-    cursor: pointer;
+    font-size: 0.8rem;
 }
 
 /* Size Buttons */
@@ -138,10 +92,8 @@ body {
     background: white;
     padding: 5px 10px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-/* PERBAIKAN: Harus nempel .size-btn.active */
 .size-btn.active {
     background: #756a57;
     color: white;
@@ -157,67 +109,24 @@ body {
     font-weight: bold;
 }
 
-/* =========================================
-   4. PRODUCT GRID (HALAMAN DETAIL)
-   ========================================= */
-.product-section {
-    padding: 60px 0;
-    text-align: center;
-    background-color: #f9f9f9;
-}
-
+/* --- Product Grid --- */
 .product-grid-detail {
     display: grid;
-    /* Grid otomatis: min 280px per produk */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
     padding: 40px 50px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .product-card {
     background: white;
     padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    transition: 0.3s;
-}
-
-.product-card:hover {
-    transform: translateY(-10px);
+    border-radius: 8px;
+    text-align: center;
 }
 
 .product-card img {
     width: 100%;
     height: 350px;
     object-fit: cover;
-    border-radius: 8px;
-}
-
-/* =========================================
-   5. FOOTER
-   ========================================= */
-.footer {
-    background-color: #756a57;
-    color: #f5f5dc;
-    padding: 50px;
-    text-align: center;
-}
-
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.footer-links a {
-    color: #f5f5dc;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.footer-links a:hover {
-    color: white;
+    border-radius: 5px;
 }
