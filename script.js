@@ -1,31 +1,35 @@
-// Hero Slider Logic
-let slides = document.querySelectorAll('.slide');
-let dots = document.querySelectorAll('.dot');
-let currentIdx = 0;
+// --- Hero Slider Logic ---
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+let currentSlideIndex = 0;
 
 function currentSlide(index) {
-    slides.forEach(s => s.classList.remove('active'));
-    dots.forEach(d => d.classList.remove('active'));
-    
-    slides[index].classList.add('active');
-    dots[index].classList.add('active');
-    currentIdx = index;
+  slides.forEach(s => s.classList.remove('active'));
+  dots.forEach(d => d.classList.remove('active'));
+  
+  slides[index].classList.add('active');
+  dots[index].classList.add('active');
+  currentSlideIndex = index;
 }
 
+// Auto play hero slider
 setInterval(() => {
-    currentIdx = (currentIdx + 1) % slides.length;
-    currentSlide(currentIdx);
+  currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+  currentSlide(currentSlideIndex);
 }, 5000);
 
-// Product Carousel Logic
-let track = document.querySelector('.product-track');
-let productIdx = 0;
+
+// --- Product Carousel Logic ---
+const track = document.querySelector('.product-track');
+let productIndex = 0;
 
 setInterval(() => {
-    productIdx++;
-    // Karena kita tampilkan 3 produk, dan total ada 4, maka max index geser adalah 1
-    if (productIdx > 1) { 
-        productIdx = 0;
-    }
-    track.style.transform = `translateX(-${productIdx * 33.33}%)`;
+  productIndex++;
+  
+  // Asumsi ada 4 produk, tampilkan 3 sekaligus
+  if (productIndex > 1) { 
+    productIndex = 0;
+  }
+  
+  track.style.transform = `translateX(-${productIndex * 33.33}%)`;
 }, 4000);
