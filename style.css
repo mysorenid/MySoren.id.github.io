@@ -1,18 +1,23 @@
-/* --- Reset Dasar --- */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-    font-family: 'Urbanist', sans-serif;
-    background-color: #C3B091; /* Warna Cream SØREN */
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* --- Navbar (Kunci Utama) --- */
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: #C3B091; /* Warna Cream SØREN */
+    color: #333;
+}
+
+/* Navbar: Logo di kiri, Menu di kanan */
 .navbar {
-    display: flex;
-    justify-content: space-between; /* Logo kiri, Menu kanan */
-    align-items: center;
+    background-color: #756a57;
     padding: 15px 50px;
-    background-color: #756a57; /* Warna Khaki SØREN */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -22,12 +27,12 @@ body {
     color: #f5f5dc;
     text-decoration: none;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 23px;
     letter-spacing: 2px;
 }
 
 .nav-right {
-    display: flex; /* Membuat menu horizontal */
+    display: flex;
     list-style: none;
     gap: 25px;
 }
@@ -36,9 +41,14 @@ body {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
 }
 
-/* --- Content Styling --- */
+.nav-right a:hover {
+    color: #f5f5dc;
+}
+
+/* Hero & Content */
 .hero {
     text-align: center;
     padding: 100px 20px;
@@ -62,6 +72,7 @@ body {
     background: white;
     padding: 20px;
     border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .product-card img {
