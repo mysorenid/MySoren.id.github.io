@@ -1,3 +1,66 @@
+/* --- Hero Section (Updated with Background Image) --- */
+.hero-elegant {
+    position: relative;
+    padding: 160px 0;
+    text-align: center;
+    /* Menggunakan gambar yang kamu pilih sebagai background */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), 
+                      url('watermarked_img_16401524210775700700.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-text {
+    width: 100%;
+    z-index: 2;
+}
+
+.hero-text .sub-title {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--accent-color);
+    display: block;
+    margin-bottom: 15px;
+}
+
+.hero-text h1 {
+    font-family: var(--font-heading);
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: var(--text-color);
+}
+
+.hero-text p {
+    font-size: 19px;
+    color: var(--accent-color);
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.btn-elegant {
+    display: inline-block;
+    padding: 16px 45px;
+    border: 1px solid #000;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+.btn-elegant:hover {
+    background-color: #000;
+    color: #fff;
+}
 /* Reset Dasar */
 * {
     margin: 0;
