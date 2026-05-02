@@ -1,20 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SØREN | Limitless Potential</title>
+    <!-- Menghubungkan ke file style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
- <html>
-<<nav class="navbar">
-  <div class="logo">SØREN <span class="separator">|</span></div>
-  <ul class="nav-links">
-    <li><a href="#">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#new">New Arrivals</a></li>
-<li><a href="#belanja">Belanja</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
+
+<nav class="navbar">
+    <div class="logo">SØREN <span class="separator">|</span></div>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#new">New Arrivals</a></li>
+        <li><a href="#belanja">Belanja</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
 </nav>
 
-<div class="content">
-  <h1>SØREN</h1>
-  <p>Limitless potential through minimalist design</p>
-<p>Choose your own comfyness.</p>
+<div class="slider-container">
+    <div class="slider">
+        <!-- Slide 1 -->
+        <div class="slide active" style="background-image: url('https://i.pinimg.com/1200x/ce/fa/bb/cefabbcebea8d7e10f383ba5fd81ec98.jpg');">
+            <div class="overlay"></div>
+            <div class="slide-content">
+                <h1>SØREN</h1>
+                <p>Limitless potential through minimalist design</p>
+                <a href="#" class="btn-shop">BELANJA SEKARANG</a>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1350&q=80');">
+            <div class="overlay"></div>
+            <div class="slide-content">
+                <h1>QUALITY</h1>
+                <p>Premium experience through textures.</p>
+                <a href="#" class="btn-shop">LIHAT KOLEKSI</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="dots-container">
+        <span class="dot active" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+    </div>
 </div>
- </html>
+
+<!-- Menghubungkan ke file script.js (ditaruh di bawah agar load lebih cepat) -->
+<script src="script.js"></script>
 </body>
+</html>
