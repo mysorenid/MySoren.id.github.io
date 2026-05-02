@@ -78,3 +78,10 @@ function terapkanFilter() {
     // Tutup menu setelah klik terapkan
     toggleFilter();
 }
+
+document.querySelectorAll('.size-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        this.classList.toggle('active');
+    });
+});
+
