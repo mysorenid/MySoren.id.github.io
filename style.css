@@ -279,3 +279,29 @@ body {
   color: white;
   text-decoration: underline;
 }
+
+/* Container khusus untuk daftar produk di halaman baju.html */
+.product-grid-detail {
+    display: grid;
+    /* Membuat kolom otomatis: minimal 250px, maksimal mengisi ruang yang ada */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 40px 20px; /* Jarak antar baris 40px, antar kolom 20px */
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Memastikan kartu produk di halaman detail tetap simetris */
+.product-grid-detail .product-card {
+    min-width: unset; /* Menghapus aturan min-width dari slider utama */
+    width: 100%;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.product-grid-detail .product-card:hover {
+    transform: translateY(-10px); /* Efek melayang sedikit saat kursor di atasnya */
+}
