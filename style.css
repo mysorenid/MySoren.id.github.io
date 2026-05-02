@@ -380,3 +380,68 @@ body {
 .product-grid-detail .product-card:hover img {
     transform: scale(1.05); /* Zoom tipis saat dilihat */
 }
+
+/* Styling Dropdown Filter di Nav */
+.filter-dropdown {
+    position: relative;
+}
+
+.filter-btn-nav {
+    border: 1px solid white;
+    padding: 5px 15px !important;
+    border-radius: 4px;
+    font-size: 0.85rem !important;
+    margin-left: 10px;
+}
+
+.filter-popup {
+    display: none; /* Sembunyi default */
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: white;
+    width: 260px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    z-index: 9999;
+    text-align: left;
+    color: #333;
+}
+
+/* Class 'show' dipicu oleh JavaScript */
+.filter-popup.show {
+    display: block;
+    animation: fadeInSlide 0.3s ease;
+}
+
+@keyframes fadeInSlide {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Isi di dalam Filter */
+.filter-group h4 {
+    color: #756a57;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.filter-group label {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.btn-apply {
+    width: 100%;
+    background: #756a57;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
