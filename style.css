@@ -381,30 +381,29 @@ body {
     transform: scale(1.05); /* Zoom tipis saat dilihat */
 }
 
-/* Kunci posisi filter */
+/* Container pembungkus filter di Nav */
 .filter-dropdown {
-    position: relative; /* Menjadi patokan bagi popup */
-    display: inline-block;
+    position: relative; /* Menjadi patokan posisi popup */
 }
 
+/* Kotak Filter yang melayang */
 .filter-popup {
-    display: none;      /* Sembunyi default */
-    position: absolute; /* MELAYANG: agar tidak menggeser logo */
-    top: 40px;          /* Jarak dari tombol filter */
-    right: 0;           /* Rata kanan dengan tombol filter */
+    display: none;      /* Sembunyi awal */
+    position: absolute; /* INI KUNCINYA: Membuatnya melayang di atas konten */
+    top: 45px;          /* Muncul di bawah tombol filter */
+    right: 0;           /* Rata kanan dengan tombol */
     background: white;
     width: 250px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    z-index: 9999;
+    z-index: 2000;      /* Di atas segalanya */
     color: #333;
     text-align: left;
 }
 
-/* Munculkan saat class 'show' ada */
 .filter-popup.show {
-    display: block;
+    display: block;     /* Muncul saat tombol diklik */
 }
 
 @keyframes fadeInSlide {
