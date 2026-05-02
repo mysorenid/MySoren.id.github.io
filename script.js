@@ -49,3 +49,32 @@ window.addEventListener('click', function(event) {
         filterMenu.classList.remove('show');
     }
 });
+
+function toggleFilter() {
+    document.getElementById('filterMenu').classList.toggle('show');
+}
+
+// Fungsi Utama untuk Memfilter Produk
+function terapkanFilter() {
+    // 1. Ambil bahan apa saja yang diceklis
+    const checkboxes = document.querySelectorAll('input[name="bahan"]:checked');
+    let bahanTerpilih = Array.from(checkboxes).map(cb => cb.value);
+
+    // 2. Ambil semua kartu produk
+    const produk = document.querySelectorAll('.product-card');
+
+    produk.forEach(item => {
+        let bahanProduk = item.getAttribute('data-bahan');
+        
+        // 3. Logika: Jika tidak ada yang diceklis, tampilkan semua. 
+        // Jika diceklis, tampilkan yang cocok saja.
+        if (bahanTerpilih.length === 0 || bahanTerpilih.includes(bahanProduk)) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    });
+
+    // Tutup menu setelah klik terapkan
+    toggleFilter();
+}
