@@ -7,67 +7,73 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <nav class="navbar">
-        <div class="logo"><a href="index.html">SØREN</a></div>
+        <div class="logo">
+            <a href="index.html">SØREN</a>
+            <span class="separator">|</span>
+        </div>
+        
         <ul class="nav-links">
-            <li><a href="index.html">Kembali ke Home</a></li>
+            <li><a href="index.html">Home</a></li>
+            
+            <li class="filter-dropdown">
+                <a href="javascript:void(0)" onclick="toggleFilter()" class="filter-btn-nav">Filter ▾</a>
+                
+                <div id="filterMenu" class="filter-popup">
+                    <div class="filter-group">
+                        <h4>Bahan Kain</h4>
+                        <label><input type="checkbox" name="bahan" value="cotton"> Cotton Combed</label>
+                        <label><input type="checkbox" name="bahan" value="linen"> Linen</label>
+                        <label><input type="checkbox" name="bahan" value="fleece"> Fleece</label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Ukuran</h4>
+                        <div class="size-options">
+                            <button class="size-btn">S</button>
+                            <button class="size-btn">M</button>
+                            <button class="size-btn">L</button>
+                            <button class="size-btn">XL</button>
+                        </div>
+                    </div>
+
+                    <button class="btn-apply" onclick="toggleFilter()">Terapkan Filter</button>
+                </div>
+            </li>
         </ul>
     </nav>
 
     <section class="product-section">
-        <h2>KOLEKSI BAJU</h2>
-        <div class="product-grid-detail">
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500" alt="Baju 1">
-                <h3>PREMIUM WHITE TEE</h3>
-                <p>Rp 150.000</p>
+        <div class="container">
+            <h2>Koleksi Baju</h2>
+            
+            <div class="product-grid-detail">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500" alt="Baju 1">
+                    <h3>Premium White Tee</h3>
+                    <p>Rp 150.000</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=500" alt="Baju 2">
+                    <h3>Premium Black Shirt</h3>
+                    <p>Rp 185.000</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1571945153237-4929e783ee4a?w=500" alt="Baju 3">
+                    <h3>Essential Gray Tee</h3>
+                    <p>Rp 145.000</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=500" alt="Baju 4">
+                    <h3>Classic Linen Shirt</h3>
+                    <p>Rp 210.000</p>
+                </div>
             </div>
-            </div>
+        </div>
     </section>
-</body>
-</html>
 
-<section class="product-section">
-    <h2>KOLEKSI BAJU</h2>
-    <div class="product-grid-detail"> <div class="product-card">
-            <img src="link-gambar-baju-1.jpg" alt="Baju 1">
-            <h3>NAMA BAJU 1</h3>
-            <p>Rp 150.000</p>
-        </div>
-
-        <div class="product-card">
-            <img src="link-gambar-baju-2.jpg" alt="Baju 2">
-            <h3>NAMA BAJU 2</h3>
-            <p>Rp 185.000</p>
-        </div>
-
-        </div>
-</section>
-
-<div class="shop-container">
-  <aside class="filter-sidebar">
-    <h3>Filter</h3>
-    
-    <div class="filter-group">
-      <h4>Bahan Kain</h4>
-      <label><input type="checkbox" name="bahan" value="cotton"> Cotton Combed</label>
-      <label><input type="checkbox" name="bahan" value="linen"> Linen</label>
-      <label><input type="checkbox" name="bahan" value="fleece"> Fleece</label>
-    </div>
-
-    <div class="filter-group">
-      <h4>Ukuran</h4>
-      <div class="size-options">
-        <button class="size-btn">S</button>
-        <button class="size-btn">M</button>
-        <button class="size-btn">L</button>
-        <button class="size-btn">XL</button>
-      </div>
-    </div>
-
-    <button class="btn-apply">Terapkan Filter</button>
-  </aside>
-
-  <div class="product-grid-detail">
-    </div>
-</div>
+    <footer class="footer
