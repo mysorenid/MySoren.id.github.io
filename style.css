@@ -218,22 +218,30 @@ nav {
     transition: transform 0.3s ease;
 }
 
-.product-track .product-img {
-width: 100%;
-    /* Ubah dari 3/4 menjadi 1/1 agar kotak sempurna */
-    aspect-ratio: 1 / 1; 
-    background: #f7f7f7;
-    overflow: hidden;
-    position: relative;
-    margin-bottom: 15px;
+.produk-container {
+    display: flex; /* Membuat berjejer ke samping */
+    gap: 20px;
+    justify-content: center;
 }
 
-.product-track .product-img img {
-width: 100%;
+.produk-card {
+    flex: 1; /* Membagi 3 kolom sama rata (diam, tidak scroll) */
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.produk-img {
+    width: 100%;
+    aspect-ratio: 1/1; /* Kotak persegi sempurna */
+    position: relative;
+}
+
+.produk-img img {
+    width: 100%;
     height: 100%;
-    /* Memastikan gambar tetap rapi di dalam kotak 1:1 */
-    object-fit: cover; 
-    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
 /* Responsif untuk HP */
