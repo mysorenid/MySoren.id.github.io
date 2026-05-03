@@ -72,6 +72,60 @@ nav {
     margin: 10px 0 20px;
 }
 
+.hero-slider {
+    width: 100%;
+    height: 75vh;
+    background: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-track {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.main-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Efek memudar */
+    padding: 0 10%;
+}
+
+.main-slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #000;
+}
+
 .btn-shop {
     display: inline-block;
     padding: 12px 35px;
