@@ -1,122 +1,26 @@
-<html>
-    <body>
-        <div id="top"></div> <nav class="navbar">
-  <div class="logo">
-    <a href="#top" style="text-decoration: none; color: inherit;">SØREN</a>
-    <span class="separator">|</span>
-  </div>
-  
-  <ul class="nav-links">
-    <li><a href="#top">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#new">New Arrivals</a></li>
-    <li><a href="#belanja">Belanja</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-<div class="slider-container" id="about">
-  <div class="slider">
-    
-    <div class="slide active" style="background-image: url('https://i.pinimg.com/1200x/ce/fa/bb/cefabbcebea8d7e10f383ba5fd81ec98.jpg');">
-      <div class="overlay"></div>
-      <div class="slide-content">
-        <h1>SØREN</h1>
-        <p>Limitless potential through minimalist design</p>
-      </div>
-    </div>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SØREN | Official Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1350&q=80');">
-      <div class="overlay"></div>
-      <div class="slide-content">
-        <h1>QUALITY</h1>
-        <p>Premium experience through textures.</p>
-      </div>
-    </div>
+    <nav>
+        <a href="#" class="logo">SØREN</a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#new-arrivals">New Arrivals</a></li>
+            <li><a href="#belanja">Belanja</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-  </div>
+    <header style="height: 80vh; display: flex; align-items: center; justify-content: center; background: #f9f9f9;">
+        <h1 style="font-weight: 200; letter-spacing: 10px; text-transform: uppercase;">Coming Soon</h1>
+    </header>
 
-  <div class="dots-container" id="new">
-    <span class="dot active" onclick="currentSlide(0)"></span>
-    <span class="dot" onclick="currentSlide(1)"></span>
-  </div>
-</div>
-
-<div class="product-section" id="new">
-  <h2>New Arrivals</h2>
-  <div class="product-wrapper">
-    <div class="product-track">
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=500" alt="Kaos 1">
-        <h3>Premium Cotton Tee</h3>
-        <p>Rp 150.000</p>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=500" alt="Kaos 2">
-        <h3>Minimalist Shirt</h3>
-        <p>Rp 185.000</p>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&w=500" alt="Kaos 3">
-        <h3>Søren Basic</h3>
-        <p>Rp 140.000</p>
-      </div>
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=500" alt="Kaos 4">
-        <h3>Essential Pack</h3>
-        <p>Rp 200.000</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="category-section" id="belanja">
-  <h2>Kategori Belanja</h2>
-  <div class="category-wrapper">
-    
-    <div class="category-card">
-      <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=500');">
-        <div class="category-overlay">
-          <h3>Baju</h3>
-          <a href="javascript:void(0)" class="btn-category" onclick="bukaModalBaju()">Lihat Produk</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="category-card">
-      <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=500');">
-        <div class="category-overlay">
-          <h3>Celana</h3>
-          <a href="#" class="btn-category">Lihat Produk</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="category-card">
-      <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1576053139778-7e32f2ae3cfd?auto=format&fit=crop&w=500');">
-        <div class="category-overlay">
-          <h3>Aksesoris</h3>
-          <a href="#" class="btn-category">Lihat Produk</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<footer class="footer" id="contact">
-  <div class="footer-container">
-    <div class="footer-info">
-      <p>&copy; 2024 SØREN. Est. 2024 - Crafting Limitless Potential.</p>
-    </div>
-  </div>
-</footer>
-        
-<div class="footer-links">
-  <a href="https://www.instagram.com/mysoren.id" target="_blank">Instagram</a>
-  <a href="https://id.shp.ee/Siqbk76Z" target="_blank">Shopee</a>
-  <a href="https://www.tiktok.com/@mysoren.id" target="_blank">TikTok</a>
-  <a href="https://www.tokopedia.com/nama_toko_kamu" target="_blank">Tokopedia</a>
-</div> 
- </body>
-  </html>
-      
+</body>
+</html>
