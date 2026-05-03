@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SØREN | Koleksi Baju</title>
+    <title>SØREN | Koleksi Celana</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,22 +18,21 @@
                 <div class="filter-popup" id="filterPopup">
                     <div class="filter-group">
                         <h4>Ukuran</h4>
-                        <label><input type="checkbox" class="filter-check" value="s"> S</label>
-                        <label><input type="checkbox" class="filter-check" value="m"> M</label>
-                        <label><input type="checkbox" class="filter-check" value="l"> L</label>
-                        <label><input type="checkbox" class="filter-check" value="xl"> XL</label>
+                        <label><input type="checkbox" class="filter-check" value="28"> 28</label>
+                        <label><input type="checkbox" class="filter-check" value="30"> 30</label>
+                        <label><input type="checkbox" class="filter-check" value="32"> 32</label>
+                        <label><input type="checkbox" class="filter-check" value="34"> 34</label>
                     </div>
                     <div class="filter-group">
                         <h4>Bahan</h4>
-                        <label><input type="checkbox" class="filter-check" value="cotton"> Cotton Combed</label>
-                        <label><input type="checkbox" class="filter-check" value="linen"> Linen</label>
-                        <label><input type="checkbox" class="filter-check" value="drill"> Drill</label>
+                        <label><input type="checkbox" class="filter-check" value="denim"> Denim</label>
+                        <label><input type="checkbox" class="filter-check" value="chino"> Chino</label>
+                        <label><input type="checkbox" class="filter-check" value="corduroy"> Corduroy</label>
                     </div>
                     <div class="filter-group">
                         <h4>Gaya</h4>
-                        <label><input type="checkbox" class="filter-check" value="minimalis"> Minimalis</label>
-                        <label><input type="checkbox" class="filter-check" value="oversized"> Oversized</label>
-                        <label><input type="checkbox" class="filter-check" value="slim-fit"> Slim Fit</label>
+                        <label><input type="checkbox" class="filter-check" value="slim"> Slim Fit</label>
+                        <label><input type="checkbox" class="filter-check" value="loose"> Loose Fit</label>
                     </div>
                     <button class="apply-btn" id="applyFilter">Terapkan</button>
                 </div>
@@ -42,39 +41,74 @@
 
         <div class="nav-right">
             <div class="search-container">
-                <input type="text" placeholder="Cari baju..." class="search-input">
+                <input type="text" placeholder="Cari celana..." class="search-input">
                 <button class="search-btn">🔍</button>
             </div>
         </div>
     </nav>
 
-    <section class="product-grid-container" style="min-height: 60vh;">
-        <h2 style="padding: 40px 5% 20px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; font-size: 18px;">Koleksi Baju</h2>
-        </section>
+    <section class="product-grid-container">
+        <div class="product-header-text">
+            <h2>Koleksi Celana</h2>
+            <p>Potongan sempurna untuk kenyamanan gerak Anda.</p>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card" data-bahan="denim">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=800&q=80" alt="Denim Jeans">
+                    <div class="product-label">Best Seller</div>
+                </div>
+                <div class="product-info">
+                    <h3>Raw Denim Blue</h3>
+                    <p class="product-material">14oz Selvedge Denim</p>
+                    <p class="product-price">Rp 459.000</p>
+                </div>
+            </div>
+
+            <div class="product-card" data-bahan="chino">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1624371414361-e6e0efc8c030?auto=format&fit=crop&w=800&q=80" alt="Chino Pants">
+                </div>
+                <div class="product-info">
+                    <h3>Classic Chino Khaki</h3>
+                    <p class="product-material">Cotton Twill Stretch</p>
+                    <p class="product-price">Rp 329.000</p>
+                </div>
+            </div>
+
+            <div class="product-card" data-bahan="denim">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=80" alt="Black Denim">
+                </div>
+                <div class="product-info">
+                    <h3>Black Slim Denim</h3>
+                    <p class="product-material">Stretch Denim</p>
+                    <p class="product-price">Rp 389.000</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer id="contact">
         <div class="footer-container">
             <div class="footer-box">
                 <h3>SØREN</h3>
                 <p>Established in 2024.</p>
-                <p>Menghadirkan esensi minimalis dalam setiap jahitan. Dibuat dengan dedikasi untuk kenyamanan abadi.</p>
+                <p>Menghadirkan esensi minimalis dalam setiap jahitan.</p>
             </div>
-
             <div class="footer-box">
                 <h4>Online Shop</h4>
                 <ul class="footer-links">
-                    <li><a href="#">Tokopedia</a></li>
-                    <li><a href="#">Shopee</a></li>
-                    <li><a href="#">TikTok Shop</a></li>
+                    <li><a href="https://www.tokopedia.com/mysoren" target="_blank">Tokopedia</a></li>
+                    <li><a href="https://id.shp.ee/Siqbk76Z" target="_blank">Shopee</a></li>
                 </ul>
             </div>
-
             <div class="footer-box">
                 <h4>Contact</h4>
                 <ul class="footer-links">
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">TikTok</a></li>
-                    <li><a href="mailto:contact@soren.id">Email Us</a></li>
+                    <li><a href="https://www.instagram.com/mysoren.id" target="_blank">Instagram</a></li>
+                    <li><a href="mailto:mysorenid@gmail.com">Email Us</a></li>
                 </ul>
             </div>
         </div>
