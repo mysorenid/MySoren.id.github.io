@@ -57,3 +57,21 @@ function nextMainSlide() {
 
 // Ganti slide setiap 5 detik
 setInterval(nextMainSlide, 4000);
+
+// LOGIKA POP UP FILTER
+const filterBtn = document.getElementById('filterBtn');
+const filterPopup = document.getElementById('filterPopup');
+
+if (filterBtn) {
+    filterBtn.addEventListener('click', function(e) {
+        e.stopPropagation(); // Mencegah klik menyebar
+        filterPopup.classList.toggle('show');
+    });
+
+    // Tutup pop up kalau klik di luar area filter
+    document.addEventListener('click', function(e) {
+        if (!filterPopup.contains(e.target) && e.target !== filterBtn) {
+            filterPopup.classList.remove('show');
+        }
+    });
+}
