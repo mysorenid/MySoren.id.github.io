@@ -70,3 +70,38 @@ if (mainSlides.length > 0) {
         dots[currentSlide].classList.add('active');
     }, 5000);
 }
+
+// --- LOGIKA FILTER BARANG ---
+const checkboxes = document.querySelectorAll('.filter-check');
+const products = document.querySelectorAll('.product-card');
+const applyBtn = document.getElementById('applyFilter');
+
+if (applyBtn) {
+    applyBtn.addEventListener('click', () => {
+        // 1. Ambil semua nilai yang dicentang
+        const checkedValues = Array.from(checkboxes)
+            .filter(input => input.checked)
+            .map(input => input.value);
+
+        // 2. Loop setiap produk
+        products.forEach(product => {
+            const productBahan = product.getAttribute('data-bahan');
+
+            // Jika tidak ada yang dicentang, tampilkan semua
+            if (checkedValues.length === 0) {
+                product.style.display = 'block';
+            } 
+            // Jika bahan produk ada di dalam daftar yang dicentang, tampilkan
+            else if (checkedValues.includes(productBahan)) {
+                product.style.display = 'block';
+            } 
+            // Jika tidak cocok, sembunyikan
+            else {
+                product.style.display = 'none';
+            }
+        });
+        
+        // Tutup popup setelah apply
+        document.getElementById('filterPopup').classList.remove('show');
+    });
+}
