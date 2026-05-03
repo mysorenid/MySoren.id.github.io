@@ -1,33 +1,24 @@
-// Slider Hero Logic
-let slides = document.querySelectorAll('.slide');
-let dots = document.querySelectorAll('.dot');
-let currentSlideIndex = 0;
+const track = document.querySelector('.product-track');
+const nextBtn = document.querySelector('.next-btn');
+const prevBtn = document.querySelector('.prev-btn');
 
-function currentSlide(index) {
-  slides.forEach(s => s.classList.remove('active'));
-  dots.forEach(d => d.classList.remove('active'));
-  
-  slides[index].classList.add('active');
-  dots[index].classList.add('active');
-  currentSlideIndex = index;
-}
+let index = 0;
 
-// Auto slide hero
-setInterval(() => {
-  currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-  currentSlide(currentSlideIndex);
-}, 5000);
+nextBtn.addEventListener('click', () => {
+    const cardWidth = document.querySelector('.product-card').offsetWidth + 25;
+    const maxScroll = track.scrollWidth - track.parentElement.offsetWidth;
+    
+    if (Math.abs(index) < maxScroll) {
+        index -= cardWidth;
+        track.style.transform = `translateX(${index}px)`;
+    }
+});
 
-// Product Slider Logic
-let track = document.querySelector('.product-track');
-let productIndex = 0;
-let totalProducts = document.querySelectorAll('.product-card').length;
-
-setInterval(() => {
-  productIndex++;
-  // Jika sudah melewati batas tampilan (asumsi tampil 3 produk sekaligus)
-  if (productIndex > totalProducts - 3) {
-    productIndex = 0;
-  }
-  track.style.transform = `translateX(-${productIndex * 33.33}%)`;
-}, 4000);
+prevBtn.addEventListener('click', () => {
+    const cardWidth = document.querySelector('.product-card').offsetWidth + 25;
+    
+    if (index < 0) {
+        index += cardWidth;
+        track.style.transform = `translateX(${index}px)`;
+    }
+});
