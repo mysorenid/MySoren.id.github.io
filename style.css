@@ -1,47 +1,73 @@
-/* Menghilangkan margin bawaan browser */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  background-color: #C3B091;
+/* style.css */
+
+/* Reset dasar untuk menghilangkan margin bawaan browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
 }
+
+/* Navigasi Utama */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%; /* Memberi ruang lebih lega */
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Styling Logo SØREN */
 .logo {
-font-weight: bold; /* ini untuk menebalkan tulisan*/
-font-size: 23px; 
-letter-spacing: 2px;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
 }
 
-/* Style untuk Navbar */
-.navbar {
-  background-color: #756a57;
-  color: #f5f5dc;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 10px 50px;
-
-  /* TAMBAHKAN KODE DI BAWAH INI */
-  position: sticky;      /* Membuat navbar menempel */
-  top: 0;               /* Jarak tempel dari atas (0 berarti paling atas) */
-  z-index: 1000;        /* Memastikan navbar selalu di atas elemen lain (seperti gambar) */
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Opsional: bayangan halus saat scroll */
-}
-
-/* Menghilangkan titik-titik pada list dan buat berjajar */
+/* Wadah Menu */
 .nav-links {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 40px; /* Jarak antar menu */
 }
 
-/* Memberi jarak antar tombol menu */
-.nav-links li {
-  margin-left: 20px;
-}
-
-/* Style untuk tulisan link */
+/* Link Menu */
 .nav-links a {
-  color: white;
-  text-decoration: none; /* Menghilangkan garis bawah */
-  font-weight: bold;
+    text-decoration: none;
+    color: #444;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+/* Efek saat mouse diarahkan ke menu */
+.nav-links a:hover {
+    color: #000;
+    border-bottom: 1px solid #000; /* Garis bawah tipis saat hover */
+}
+
+/* Responsif untuk tampilan HP */
+@media (max-width: 768px) {
+    nav {
+        padding: 20px 5%;
+        flex-direction: column; /* Menu pindah ke bawah logo di HP */
+        gap: 15px;
+    }
+    
+    .nav-links {
+        gap: 20px;
+    }
+    
+    .nav-links a {
+        font-size: 11px;
+    }
 }
