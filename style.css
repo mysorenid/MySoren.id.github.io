@@ -1,350 +1,50 @@
-/* Menghilangkan margin bawaan browser */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  background-color: #C3B091;
+/* --- Navbar (Soren & Menu Rapat Kiri) --- */
+.navbar {
+    background-color: #756a57;
+    display: flex;
+    justify-content: flex-start; /* Memaksa semua elemen ke kiri */
+    align-items: center;
+    padding: 10px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .logo {
-font-weight: bold; /* ini untuk menebalkan tulisan*/
-font-size: 23px; 
-letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 23px;
+    letter-spacing: 2px;
 }
 
 .logo a {
-  cursor: pointer;
-  transition: 0.3s;
+    color: #f5f5dc;
+    text-decoration: none;
 }
 
-.logo a:hover {
-  opacity: 0.8; /* Memberi efek sedikit pudar saat disentuh */
-}
-
-/* Style untuk Navbar */
-.navbar {
-  background-color: #756a57;
-  color: #f5f5dc;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 10px 50px;
-
-  /* TAMBAHKAN KODE DI BAWAH INI */
-  position: sticky;      /* Membuat navbar menempel */
-  top: 0;               /* Jarak tempel dari atas (0 berarti paling atas) */
-  z-index: 1000;        /* Memastikan navbar selalu di atas elemen lain (seperti gambar) */
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Opsional: bayangan halus saat scroll */
-}
-
-/* Menghilangkan titik-titik pada list dan buat berjajar */
-.nav-links {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-/* Memberi jarak antar tombol menu */
-.nav-links li {
-  margin-left: 20px;
-}
-
-/* Style untuk tulisan link */
-.nav-links a {
-  color: white;
-  text-decoration: none; /* Menghilangkan garis bawah */
-  font-weight: bold;
-}
-
-/* Efek saat kursor menempel (hover) */
-.nav-links a:hover {
-  color: #F5F5DC; 
-}
-
-.content {
-  text-align: center;
-  padding: 50px;
-}
-
-/* Update Navbar agar semua ke kiri */
-.navbar {
-  background-color: #756a57;
-  color: #f5f5dc;
-  display: flex;
-  justify-content: flex-start; /* Mengubah dari space-between ke flex-start */
-  align-items: center;
-  padding: 10px 50px;
-}
-
-/* Beri jarak sedikit untuk si pembatas */
 .separator {
-  margin: 0 15px; /* Jarak kiri dan kanan garis pembatas */
-  font-weight: 300; /* Garisnya dibuat lebih tipis agar estetik */
-  color: #f5f5dc;
-  opacity: 0.6; /* Membuat garis sedikit transparan */
+    margin: 0 15px; /* Jarak antara tulisan Soren dan Garis | */
+    color: #f5f5dc;
+    opacity: 0.6;
 }
 
-/* Pastikan nav-links tidak punya margin bawaan yang aneh */
 .nav-links {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
+    display: flex;      /* Membuat menu berjejer ke samping */
+    list-style: none;   /* Menghilangkan titik-titik list */
+    margin: 0;
+    padding: 0;
+    gap: 20px;          /* Jarak antar tombol menu */
 }
 
-.slider-container {
-  text-align: center;
-  padding: 100px 20px;
-  position: relative;
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.slide {
-  display: none; /* Sembunyikan semua slide dulu */
-}
-
-.slide.active {
-  display: block; /* Hanya tampilkan yang aktif */
-  animation: fadeIn 0.5s; /* Efek halus saat muncul */
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* Style Gelembung */
-.dots-container {
-  position: absolute; /* Membuatnya melayang di atas slider */
-  bottom: 20px;       /* Jarak 20px dari bawah slider */
-  left: 50%;          /* Geser ke tengah */
-  transform: translateX(-50%); /* Kunci agar benar-benar di tengah presisi */
-  z-index: 10;        /* Pastikan titiknya tidak tertutup gambar */
-  display: flex;
-  justify-content: center;
-}
-
-.dot {
-  height: 12px;
-  width: 12px;
-  margin: 0 5px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.dot.active, .dot:hover {
-  background-color: #756a57; /* Warna Khaki gelapmu */
-  transform: scale(1.2);
-}
-
-.slider-container {
-  position: relative;
-  width: 100%;
-  height: 80vh; /* Sesuaikan tinggi yang kamu mau */
-}
-
-.slide {
-  position: absolute; /* Membuat slide bertumpuk di titik yang sama */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: none; /* Sembunyikan semua */
-}
-
-.slide.active {
-  display: flex; /* Hanya tampilkan yang aktif */
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.product-section {
-  padding: 50px 0;
-  background: #f9f9f9;
-  text-align: center;
-}
-
-.product-wrapper {
-  max-width: 1000px; /* Sesuaikan lebar 3 produk */
-  margin: 0 auto;
-  overflow: hidden; /* Sembunyikan produk ke-4 dst */
-}
-
-.product-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.product-card {
-  min-width: 33.33%;
-  padding: 20px;       /* Beri ruang napas yang sama kiri-kanan */
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Memastikan teks & harga tetap di tengah */
-  text-align: center;
-}
-
-.product-card img {
-  width: 100%;
-  height: 350px;       /* Tentukan tinggi yang sama untuk semua gambar */
-  object-fit: cover;   /* Ini kuncinya! Gambar akan terpotong rapi, bukan gepeng */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.product-card h3 {
-  margin: 15px 0 5px 0;
-  font-size: 1.2rem;
-  text-transform: uppercase; /* Biar lebih tegas & rapi */
-  letter-spacing: 1px;
-}
-
-.product-section h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  color: #756a57;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  position: relative;
-}
-
-/* Garis kecil di bawah judul biar makin estetik */
-.product-section h2::after {
-  content: '';
-  display: block;
-  width: 50px;
-  height: 2px;
-  background: #756a57;
-  margin: 10px auto;
-}
-
-.category-section {
-  padding: 80px 50px;
-  background-color: #fff;
-  text-align: center;
-}
-
-.category-wrapper {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px; /* Jarak antar kolom */
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.category-card {
-  flex: 1; /* Membuat setiap kolom punya lebar yang sama */
-  height: 400px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.category-image {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.5s ease;
-}
-
-/* Efek zoom saat gambar disentuh */
-.category-card:hover .category-image {
-  transform: scale(1.1);
-}
-
-.category-overlay {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(117, 106, 87, 0.4); /* Warna Khaki gelapmu tapi transparan */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-
-.category-overlay h3 {
-  font-size: 2rem;
-  letter-spacing: 3px;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-}
-
-.btn-category {
-  padding: 10px 20px;
-  border: 2px solid white;
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  transition: 0.3s;
-}
-
-.btn-category:hover {
-  background: white;
-  color: #756a57;
-}
-
-.footer {
-  background-color: #756a57; /* Warna Khaki gelap khas SØREN */
-  color: #f5f5dc;           /* Teks warna Cream agar mewah */
-  padding: 40px 50px;       /* Padding lebih tebal agar tinggi 2x navbar */
-  text-align: center;
-  border-top: 1px solid rgba(245, 245, 220, 0.2);
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.footer-info p {
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-  opacity: 0.8;
-  margin: 0;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 30px; /* Jarak antar link sosial media */
-}
-
-.footer-links a {
-  color: #f5f5dc;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: 0.3s ease;
-  position: relative;
-}
-
-/* Efek garis bawah saat hover */
-.footer-links a:hover {
-  opacity: 1;
-  color: #fff;
-}
-
-.footer-links a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 1px;
-  bottom: -5px;
-  left: 0;
-  background-color: #fff;
-  transition: 0.3s;
-}
-
-.footer-links a:hover::after {
-  width: 100%;
+.nav-links a:hover {
+    color: #f5f5dc;
 }
