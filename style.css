@@ -437,6 +437,12 @@ footer {
     letter-spacing: 1px;
 }
 
+/* Pastikan kontainer produk punya tinggi minimal agar footer tetap di bawah */
+.product-grid-container {
+    min-height: 80vh; /* Ini yang bikin footer turun ke bawah */
+    padding: 40px 5%;
+}
+
 /* Responsif Footer di HP */
 @media (max-width: 768px) {
     .footer-container {
@@ -527,23 +533,22 @@ footer {
     display: inline-block;
 }
 
-/* POPUP BOX */
+/* Pastikan Pop-up Filter Muncul di Atas Elemen Lain */
 .filter-popup {
-    display: none; /* Harus tersembunyi di awal */
+    display: none;
     position: absolute;
-    top: 45px;
+    top: 50px;
     left: 0;
     background: #fff;
     border: 1px solid #eee;
-    padding: 20px;
+    padding: 25px;
     width: 450px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    z-index: 100;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    z-index: 9999; /* Sangat penting agar tidak tertutup */
 }
 
-/* Class ini akan ditambah/dihapus otomatis oleh JavaScript */
 .filter-popup.show {
-    display: grid; 
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
