@@ -11,29 +11,28 @@
     <nav class="product-nav">
         <div class="nav-left">
             <a href="index.html" class="logo">SØREN</a>
-            <span class="divider"></span>
+            <span class="divider">|</span>
             <div class="filter-wrapper">
                 <button class="nav-btn" id="filterBtn">Filter ▾</button>
                 
                 <div class="filter-popup" id="filterPopup">
                     <div class="filter-group">
                         <h4>Ukuran</h4>
-                        <label><input type="checkbox"> S</label>
-                        <label><input type="checkbox"> M</label>
-                        <label><input type="checkbox"> L</label>
-                        <label><input type="checkbox"> XL</label>
+                        <label><input type="checkbox" class="filter-check" value="s"> S</label>
+                        <label><input type="checkbox" class="filter-check" value="m"> M</label>
+                        <label><input type="checkbox" class="filter-check" value="l"> L</label>
+                        <label><input type="checkbox" class="filter-check" value="xl"> XL</label>
                     </div>
                     <div class="filter-group">
                         <h4>Bahan</h4>
-                        <label><input type="checkbox"> Cotton Combed</label>
-                        <label><input type="checkbox"> Linen</label>
-                        <label><input type="checkbox"> Drill</label>
+                        <label><input type="checkbox" class="filter-check" value="cotton"> Cotton Combed</label>
+                        <label><input type="checkbox" class="filter-check" value="linen"> Linen</label>
+                        <label><input type="checkbox" class="filter-check" value="drill"> Drill</label>
                     </div>
                     <div class="filter-group">
                         <h4>Gaya</h4>
-                        <label><input type="checkbox"> Minimalis</label>
-                        <label><input type="checkbox"> Oversized</label>
-                        <label><input type="checkbox"> Slim Fit</label>
+                        <label><input type="checkbox" class="filter-check" value="minimalis"> Minimalis</label>
+                        <label><input type="checkbox" class="filter-check" value="oversized"> Oversized</label>
                     </div>
                     <button class="apply-btn" id="applyFilter">Terapkan</button>
                 </div>
@@ -48,80 +47,35 @@
         </div>
     </nav>
 
-<section class="product-grid-container">
-    <div class="product-header-text">
-        <h2>Koleksi Baju</h2>
-        <p>Menampilkan esensi minimalis untuk gaya sehari-hari.</p>
-    </div>
-
-   <div class="product-grid">
-   <div class="product-card" data-bahan="cotton">
-    <div class="product-img">
-        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80" alt="Essential Tee">
-    </div>
-    <div class="product-info">
-        <h3>Essential White Tee</h3>
-        <p class="product-material">Cotton Combed 30s</p>
-        <p class="product-price">Rp 149.000</p>
-    </div>
-</div>
-
-<div class="product-card" data-bahan="linen">
-    <div class="product-img">
-        <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80" alt="Linen Shirt">
-    </div>
-    <div class="product-info">
-        <h3>Linen Summer Shirt</h3>
-        <p class="product-material">Premium Linen</p>
-        <p class="product-price">Rp 259.000</p>
-    </div>
-</div>
-
-    <div class="product-card">
-        <div class="product-img">
-            <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80" alt="Linen Shirt">
+    <section class="product-grid-container">
+        <div class="product-header-text">
+            <h2>Koleksi Baju</h2>
+            <p>Menampilkan esensi minimalis untuk gaya sehari-hari.</p>
         </div>
-        <div class="product-info">
-            <h3>Linen Summer Shirt</h3>
-            <p class="product-material">Premium Linen</p>
-            <p class="product-price">Rp 259.000</p>
-        </div>
-    </div>
-    
-    </div>
-</section>
 
-    <footer id="contact">
-        <div class="footer-container">
-            <div class="footer-box">
-                <h3>SØREN</h3>
-                <p>Established in 2024.</p>
-                <p>Menghadirkan esensi minimalis dalam setiap jahitan. Dibuat dengan dedikasi untuk kenyamanan abadi.</p>
+        <div class="product-grid">
+            <div class="product-card" data-bahan="cotton">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80" alt="Essential Tee">
+                </div>
+                <div class="product-info">
+                    <h3>Essential White Tee</h3>
+                    <p class="product-material">Cotton Combed 30s</p>
+                    <p class="product-price">Rp 149.000</p>
+                </div>
             </div>
 
-            <div class="footer-box">
-                <h4>Online Shop</h4>
-                <ul class="footer-links">
-                    <li><a href="#">Tokopedia</a></li>
-                    <li><a href="#">Shopee</a></li>
-                    <li><a href="#">TikTok Shop</a></li>
-                </ul>
+            <div class="product-card" data-bahan="linen">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=800&q=80" alt="Linen Shirt">
+                </div>
+                <div class="product-info">
+                    <h3>Linen Summer Shirt</h3>
+                    <p class="product-material">Premium Linen</p>
+                    <p class="product-price">Rp 259.000</p>
+                </div>
             </div>
 
-            <div class="footer-box">
-                <h4>Contact</h4>
-                <ul class="footer-links">
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">TikTok</a></li>
-                    <li><a href="mailto:contact@soren.id">Email Us</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 SØREN. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+            <div class="product-card" data-bahan="cotton">
+                <div class="product-img">
+                    <img src="
