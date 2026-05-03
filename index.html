@@ -8,16 +8,14 @@
 </head>
 <body>
 
-<div id="top"></div> 
-
 <nav class="navbar">
   <div class="logo">
-    <a href="#top">SØREN</a>
+    <a href="index.html">SØREN</a>
     <span class="separator">|</span>
   </div>
   
   <ul class="nav-links">
-    <li><a href="#top">Home</a></li>
+    <li><a href="index.html">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#new">New Arrivals</a></li>
     <li><a href="#belanja">Belanja</a></li>
@@ -27,30 +25,58 @@
 
 <div class="slider-container" id="about">
     <div class="slide active" style="background-image: url('https://i.pinimg.com/1200x/ce/fa/bb/cefabbcebea8d7e10f383ba5fd81ec98.jpg');">
-      <div class="overlay"></div>
-      <div class="slide-content">
-        <h1 style="font-size: 60px; letter-spacing: 10px;">SØREN</h1>
-        <p>Limitless potential through minimalist design</p>
-      </div>
+        <div class="overlay"></div>
+        <div class="slide-content">
+            <h1>SØREN</h1>
+            <p>Limitless potential through minimalist design</p>
+        </div>
     </div>
 </div>
 
 <section class="product-section" id="new">
-  <h2>New Arrivals</h2>
-  <div class="product-grid-detail">
-    <div class="product-card">
-      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500" alt="Baju 1">
-      <h3>Premium Cotton Tee</h3>
-      <p>Rp 150.000</p>
+    <h2>New Arrivals</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500" alt="Kaos 1">
+            <h3>Premium Cotton Tee</h3>
+            <p>Rp 150.000</p>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=500" alt="Kaos 2">
+            <h3>Minimalist Shirt</h3>
+            <p>Rp 185.000</p>
+        </div>
     </div>
-    <div class="product-card">
-      <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=500" alt="Baju 2">
-      <h3>Minimalist Shirt</h3>
-      <p>Rp 185.000</p>
-    </div>
-  </div>
 </section>
 
-<script src="script.js"></script>
+<section class="product-section" id="belanja" style="background-color: #b0a086;">
+    <h2 style="color: white; margin-bottom: 30px;">Kategori Belanja</h2>
+    <div class="category-grid">
+        
+        <div class="category-card">
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500" alt="Baju">
+            <h3>BAJU</h3>
+            <a href="baju.html" class="btn-shop">Lihat Produk</a>
+        </div>
+
+        <div class="category-card">
+            <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=500" alt="Celana">
+            <h3>CELANA</h3>
+            <a href="celana.html" class="btn-shop">Lihat Produk</a>
+        </div>
+
+        <div class="category-card">
+            <img src="https://images.unsplash.com/photo-1576053139778-7e32f2ae3cfd?w=500" alt="Aksesoris">
+            <h3>AKSESORIS</h3>
+            <a href="aksesoris.html" class="btn-shop">Lihat Produk</a>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer" id="contact">
+    <p>&copy; 2024 SØREN. Est. 2024</p>
+</footer>
+
 </body>
 </html>
