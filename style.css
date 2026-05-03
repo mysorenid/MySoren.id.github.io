@@ -41,20 +41,21 @@ nav {
     gap: 30px; /* Jarak antar item menu */
 }
 
-/* Link Menu */
+/* Link Menu dengan warna lama */
 .nav-links a {
     text-decoration: none;
-    color: #555;
+    color: #888; /* Warna abu-abu yang lebih soft seperti sebelumnya */
     font-size: 13px;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 }
 
+/* Warna saat mouse diarahkan ke menu */
 .nav-links a:hover {
-    color: #000;
-    border-bottom: 1px solid #000; /* Garis bawah tipis saat hover */
+    color: #333; /* Berubah jadi agak gelap saat di-hover */
+    border-bottom: none; /* Hilangkan garis bawah kalau mau persis seperti awal */
 }
 
 /* Responsif untuk tampilan HP */
