@@ -77,30 +77,30 @@ if (filterBtn) {
 }
 
 
-// --- LOGIKA FILTER POP-UP ---
+// Cek jika elemen ada di halaman sebelum menjalankan script
 const filterBtn = document.getElementById('filterBtn');
 const filterPopup = document.getElementById('filterPopup');
-const applyBtn = document.getElementById('applyFilter');
+const applyFilter = document.getElementById('applyFilter');
 
 if (filterBtn && filterPopup) {
-    // 1. Klik tombol Filter untuk buka/tutup
-    filterBtn.addEventListener('click', function(e) {
-        e.stopPropagation(); // Biar nggak langsung ketutup pas diklik
+    // Membuka & Menutup Filter saat tombol diklik
+    filterBtn.onclick = function(e) {
+        e.stopPropagation();
         filterPopup.classList.toggle('show');
-    });
+    };
 
-    // 2. Klik tombol "Terapkan" untuk tutup filter
-    if (applyBtn) {
-        applyBtn.addEventListener('click', function() {
+    // Menutup filter saat klik tombol 'Terapkan'
+    if (applyFilter) {
+        applyFilter.onclick = function() {
             filterPopup.classList.remove('show');
-        });
+        };
     }
 
-    // 3. Klik di mana saja di luar filter untuk menutup
-    document.addEventListener('click', function(e) {
-        if (!filterPopup.contains(e.target) && e.target !== filterBtn) {
+    // Menutup filter jika klik di luar area popup
+    window.onclick = function(event) {
+        if (!filterPopup.contains(event.target) && event.target !== filterBtn) {
             filterPopup.classList.remove('show');
         }
-    });
+    };
 }
 
