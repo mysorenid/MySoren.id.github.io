@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SØREN | Koleksi Celana</title>
+    <title>SØREN | Koleksi Baju</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,22 +11,78 @@
     <nav class="product-nav">
         <div class="nav-left">
             <a href="index.html" class="logo">SØREN</a>
-            <span class="divider"></span>
-            <button class="nav-btn">Filter</button>
+            <span class="divider">|</span>
+            <div class="filter-wrapper">
+                <button class="nav-btn" id="filterBtn">Filter ▾</button>
+                
+                <div class="filter-popup" id="filterPopup">
+                    <div class="filter-group">
+                        <h4>Ukuran</h4>
+                        <label><input type="checkbox"> S</label>
+                        <label><input type="checkbox"> M</label>
+                        <label><input type="checkbox"> L</label>
+                        <label><input type="checkbox"> XL</label>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Bahan</h4>
+                        <label><input type="checkbox"> Cotton Combed</label>
+                        <label><input type="checkbox"> Linen</label>
+                        <label><input type="checkbox"> Drill</label>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Gaya</h4>
+                        <label><input type="checkbox"> Minimalis</label>
+                        <label><input type="checkbox"> Oversized</label>
+                        <label><input type="checkbox"> Slim Fit</label>
+                    </div>
+                    <button class="apply-btn" id="applyFilter">Terapkan</button>
+                </div>
+            </div>
         </div>
 
         <div class="nav-right">
             <div class="search-container">
-                <input type="text" placeholder="Cari celana..." class="search-input">
+                <input type="text" placeholder="Cari baju..." class="search-input">
                 <button class="search-btn">🔍</button>
             </div>
         </div>
     </nav>
 
-    <section class="product-grid-container">
-        <h2 style="padding: 20px 5%; font-weight: 400; letter-spacing: 2px;">Koleksi Celana</h2>
+    <section class="product-grid-container" style="min-height: 60vh;">
+        <h2 style="padding: 40px 5% 20px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; font-size: 18px;">Koleksi Baju</h2>
         </section>
 
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h3>SØREN</h3>
+                <p>Established in 2024.</p>
+                <p>Menghadirkan esensi minimalis dalam setiap jahitan. Dibuat dengan dedikasi untuk kenyamanan abadi.</p>
+            </div>
+
+            <div class="footer-box">
+                <h4>Online Shop</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Tokopedia</a></li>
+                    <li><a href="#">Shopee</a></li>
+                    <li><a href="#">TikTok Shop</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h4>Contact</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">TikTok</a></li>
+                    <li><a href="mailto:contact@soren.id">Email Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SØREN. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
