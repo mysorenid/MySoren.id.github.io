@@ -1,6 +1,4 @@
-/* style.css */
-
-/* Reset dasar untuk menghilangkan margin bawaan browser */
+/* RESET DASAR */
 * {
     margin: 0;
     padding: 0;
@@ -8,309 +6,147 @@
     font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Navigasi Utama */
+body {
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+/* NAVIGATION (Logo & Menu Sejajar) */
 nav {
     display: flex;
-    justify-content: flex-start; /* Mengatur semua konten agar rata kiri */
+    justify-content: flex-start;
     align-items: center;
     padding: 20px 5%;
-    background-color: #ffffff;
-    border-bottom: 1px solid #f0f0f0;
+    background: #fff;
+    border-bottom: 1px solid #eee;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-/* Styling Logo SØREN */
 .logo {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 800;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    letter-spacing: 3px;
     text-decoration: none;
     color: #000;
-    margin-right: 40px; /* Jarak antara Logo dan Menu Pertama */
-    border-right: 1px solid #ddd; /* Garis vertikal pemisah (opsional) */
+    margin-right: 40px;
     padding-right: 20px;
+    border-right: 1px solid #ddd;
 }
 
-/* Wadah Menu */
 .nav-links {
-    list-style: none;
     display: flex;
-    gap: 30px; /* Jarak antar item menu */
+    list-style: none;
+    gap: 25px;
 }
 
-/* Link Menu dengan warna lama */
 .nav-links a {
     text-decoration: none;
-    color: #888; /* Warna abu-abu yang lebih soft seperti sebelumnya */
-    font-size: 13px;
-    font-weight: 500;
+    color: #888;
+    font-size: 12px;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
+    transition: 0.3s;
 }
 
-/* Warna saat mouse diarahkan ke menu */
 .nav-links a:hover {
-    color: #333; /* Berubah jadi agak gelap saat di-hover */
-    border-bottom: none; /* Hilangkan garis bawah kalau mau persis seperti awal */
+    color: #000;
 }
 
-/* Responsif untuk tampilan HP */
-@media (max-width: 768px) {
-    nav {
-        padding: 20px 5%;
-        flex-direction: column; /* Menu pindah ke bawah logo di HP */
-        gap: 15px;
-    }
-    
-    .nav-links {
-        gap: 20px;
-    }
-    
-    .nav-links a {
-        font-size: 11px;
-    }
-}
-
-/* Slider Container */
+/* SLIDER INTRODUCTION (Hero Section) */
 .slider-container {
     width: 100%;
-    height: 70vh; /* Tinggi slide 70% dari layar */
-    background-color: #f9f9f9; /* Warna latar soft */
+    height: 60vh; /* Tinggi pas, tidak terlalu besar */
+    background: #f9f9f9;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    position: relative;
-}
-
-.slider {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.slide {
     text-align: center;
-    padding: 0 10%;
-}
-
-/* Tulisan di dalam Slide */
-.slide-content span {
-    font-size: 12px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    color: #888;
-    display: block;
-    margin-bottom: 15px;
 }
 
 .slide-content h2 {
-    font-size: 42px;
+    font-size: 40px;
     font-weight: 300;
     letter-spacing: 8px;
-    margin-bottom: 25px;
-    color: #1a1a1a;
+    margin: 10px 0 20px;
 }
 
-.slide-content p {
-    font-size: 16px;
-    color: #666;
-    max-width: 600px;
-    margin: 0 auto 35px;
-    line-height: 1.6;
-}
-
-/* Tombol Shop */
 .btn-shop {
     display: inline-block;
     padding: 12px 35px;
     border: 1px solid #000;
-    text-decoration: none;
     color: #000;
+    text-decoration: none;
     font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    transition: all 0.3s ease;
+    margin-top: 20px;
 }
 
-.btn-shop:hover {
-    background-color: #000;
-    color: #fff;
-}
-
-/* Responsif HP */
-@media (max-width: 768px) {
-    .slide-content h2 {
-        font-size: 28px;
-        letter-spacing: 4px;
-    }
-    .slider-container {
-        height: 60vh;
-    }
-
-    /* About Section Style (Knitto Style) */
+/* ABOUT SECTION (Knitto Style) */
 .about-section {
-    padding: 100px 10%; /* Ruang kosong yang luas agar terlihat premium */
-    background-color: #ffffff;
+    padding: 80px 10%;
 }
 
 .about-container {
     display: flex;
     align-items: center;
-    gap: 80px; /* Jarak antara gambar dan teks */
+    gap: 50px;
 }
 
-.about-image {
-    flex: 1;
-}
+.about-image { flex: 1; }
+.about-image img { width: 100%; height: auto; display: block; }
+.about-text { flex: 1; }
 
-.about-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    /* Memberikan sedikit efek lengkung atau biarkan tajam untuk kesan modern */
-    border-radius: 2px;
-}
-
-.about-text {
-    flex: 1;
-}
-
-.about-text span {
-    font-size: 14px;
-    color: #888;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    display: block;
-    margin-bottom: 15px;
-}
-
-.about-text h2 {
-    font-size: 32px;
-    font-weight: 600;
-    margin-bottom: 25px;
-    color: #1a1a1a;
-    letter-spacing: 1px;
-}
-
-.about-text p {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-/* Responsif untuk HP - Gambar pindah ke atas teks */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-        gap: 40px;
-        padding: 50px 5%;
-    }
-    
-    .about-section {
-        padding: 60px 5%;
-    }
-
-    .about-text h2 {
-        font-size: 24px;
-    }
-/* New Arrivals Section */
+/* NEW ARRIVALS (Berjejer ke Samping) */
 .new-arrivals {
-    padding: 80px 10%;
-    background-color: #fff;
-    overflow: hidden;
+    padding: 60px 10%;
 }
 
 .arrival-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
-.arrival-header h2 {
-    font-size: 28px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-weight: 400;
-}
-
-.nav-arrows button {
-    background: none;
-    border: 1px solid #ddd;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: 0.3s;
-}
-
-.nav-arrows button:hover {
-    background: #000;
-    color: #fff;
-    border-color: #000;
-}
-
-/* Slider Logic */
 .product-slider-container {
     width: 100%;
-    overflow-x: hidden;
+    overflow: hidden; /* Sembunyikan scrollbar */
 }
 
 .product-track {
     display: flex;
-    gap: 25px;
-    transition: transform 0.5s ease-in-out;
+    gap: 20px; /* Jarak antar produk */
+    transition: transform 0.5s ease;
 }
 
 .product-card {
-    min-width: calc(25% - 20px); /* Menampilkan 4 produk sekaligus */
-    text-align: left;
+    min-width: calc(25% - 15px); /* Membagi 4 kolom */
+    flex-shrink: 0; /* Paksa tetap sejajar ke samping */
 }
 
 .product-img {
-    background-color: #f5f5f5;
+    width: 100%;
     aspect-ratio: 3/4;
-    overflow: hidden;
-    margin-bottom: 15px;
+    background: #f0f0f0;
+    margin-bottom: 10px;
 }
 
 .product-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.product-card:hover img {
-    transform: scale(1.05);
 }
 
 .product-info h3 {
     font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 5px;
     text-transform: uppercase;
 }
 
-.product-info p {
-    font-size: 14px;
-    color: #888;
+/* RESPONSIVE (HP) */
+@media (max-width: 768px) {
+    .about-container { flex-direction: column; }
+    .product-card { min-width: calc(50% - 10px); } /* 2 produk di HP */
 }
-
-/* Responsive */
-@media (max-width: 1024px) {
-    .product-card { min-width: calc(50% - 20px); } /* 2 Produk di tablet */
-}
-@media (max-width: 600px) {
-    .product-card { min-width: 80%; } /* 1 Produk besar di HP */
-}
-
-    
-
