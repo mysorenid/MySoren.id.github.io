@@ -1,24 +1,41 @@
+// --- AUTO SLIDER UNTUK NEW ARRIVALS ---
 const track = document.querySelector('.product-track');
 const nextBtn = document.querySelector('.next-btn');
 const prevBtn = document.querySelector('.prev-btn');
 
 let index = 0;
 
-nextBtn.addEventListener('click', () => {
-    const cardWidth = document.querySelector('.product-card').offsetWidth + 25;
+// Fungsi untuk geser ke kanan
+function moveNext() {
+    const cardWidth = document.querySelector('.product-card').offsetWidth + 20;
     const maxScroll = track.scrollWidth - track.parentElement.offsetWidth;
     
     if (Math.abs(index) < maxScroll) {
         index -= cardWidth;
-        track.style.transform = `translateX(${index}px)`;
+    } else {
+        index = 0; // Kembali ke awal kalau sudah mentok
     }
-});
+    track.style.transform = `translateX(${index}px)`;
+}
 
-prevBtn.addEventListener('click', () => {
-    const cardWidth = document.querySelector('.product-card').offsetWidth + 25;
-    
+// Fungsi untuk geser ke kiri
+function movePrev() {
+    const cardWidth = document.querySelector('.product-card').offsetWidth + 20;
     if (index < 0) {
         index += cardWidth;
-        track.style.transform = `translateX(${index}px)`;
+    } else {
+        index = -(track.scrollWidth - track.parentElement.offsetWidth); // Ke paling akhir
     }
-});
+    track.style.transform = `translateX(${index}px)`;
+}
+
+// Event Listener Tombol
+nextBtn.addEventListener('click', moveNext);
+prevBtn.addEventListener('click', movePrev);
+
+// AUTO PLAY: Geser otomatis setiap 3 detik
+let autoPlay = setInterval(moveNext, 3000);
+
+// Berhenti auto-play kalau mouse ada di atas slider (biar pengunjung bisa liat produk)
+track.parentElement.addEventListener('mouseenter', () => clearInterval(autoPlay));
+track.parentElement.addEventListener('mouseleave', () => autoPlay = setInterval(moveNext, 3000));
