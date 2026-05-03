@@ -74,3 +74,84 @@ nav {
         font-size: 11px;
     }
 }
+
+/* Slider Container */
+.slider-container {
+    width: 100%;
+    height: 70vh; /* Tinggi slide 70% dari layar */
+    background-color: #f9f9f9; /* Warna latar soft */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide {
+    text-align: center;
+    padding: 0 10%;
+}
+
+/* Tulisan di dalam Slide */
+.slide-content span {
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #888;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.slide-content h2 {
+    font-size: 42px;
+    font-weight: 300;
+    letter-spacing: 8px;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+}
+
+.slide-content p {
+    font-size: 16px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 35px;
+    line-height: 1.6;
+}
+
+/* Tombol Shop */
+.btn-shop {
+    display: inline-block;
+    padding: 12px 35px;
+    border: 1px solid #000;
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-shop:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Responsif HP */
+@media (max-width: 768px) {
+    .slide-content h2 {
+        font-size: 28px;
+        letter-spacing: 4px;
+    }
+    .slider-container {
+        height: 60vh;
+    }
+}
+
