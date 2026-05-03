@@ -534,22 +534,23 @@ footer {
     display: inline-block;
 }
 
-/* Pastikan Pop-up Filter Muncul di Atas Elemen Lain */
+/* Sembunyikan default */
 .filter-popup {
-    display: none;
+    display: none; 
     position: absolute;
     top: 50px;
     left: 0;
+    z-index: 9999; /* Pastikan angka ini tinggi agar melayang di atas gambar */
     background: #fff;
     border: 1px solid #eee;
-    padding: 25px;
+    padding: 20px;
     width: 450px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-    z-index: 9999; /* Sangat penting agar tidak tertutup */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
+/* Munculkan saat class 'show' aktif dari JavaScript */
 .filter-popup.show {
-    display: grid;
+    display: grid !important; /* Gunakan !important jika masih membandel */
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
