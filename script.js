@@ -56,4 +56,4 @@ function nextMainSlide() {
 }
 
 // Ganti slide setiap 5 detik
-setInterval(nextMainSlide, 5000);
+setInterval(nextMainSlide, 4000);
