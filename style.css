@@ -437,18 +437,19 @@ footer {
     letter-spacing: 1px;
 }
 
-/* Pastikan kontainer produk punya tinggi minimal agar footer tetap di bawah */
-.product-grid-container {
-    min-height: 80vh; /* Ini yang bikin footer turun ke bawah */
-    padding: 40px 5%;
+/* Update Grid untuk 3 Pakaian per Baris */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Mengubah dari 4 menjadi 3 kolom */
+    gap: 40px 25px; /* Memberi jarak lebih lebar agar tidak sesak */
+    padding: 20px 5% 80px;
 }
 
-/* Responsif Footer di HP */
+/* Penyesuaian untuk tampilan HP (Tetap 2 kolom agar tidak terlalu kecil) */
 @media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        gap: 40px;
-        text-align: center;
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px 15px;
     }
 }
 
