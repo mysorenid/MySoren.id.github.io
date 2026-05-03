@@ -11,9 +11,9 @@
 /* Navigasi Utama */
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Mengatur semua konten agar rata kiri */
     align-items: center;
-    padding: 25px 8%; /* Memberi ruang lebih lega */
+    padding: 20px 5%;
     background-color: #ffffff;
     border-bottom: 1px solid #f0f0f0;
     position: sticky;
@@ -23,33 +23,35 @@ nav {
 
 /* Styling Logo SØREN */
 .logo {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 800;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     text-decoration: none;
     color: #000;
+    margin-right: 40px; /* Jarak antara Logo dan Menu Pertama */
+    border-right: 1px solid #ddd; /* Garis vertikal pemisah (opsional) */
+    padding-right: 20px;
 }
 
 /* Wadah Menu */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 40px; /* Jarak antar menu */
+    gap: 30px; /* Jarak antar item menu */
 }
 
 /* Link Menu */
 .nav-links a {
     text-decoration: none;
-    color: #444;
+    color: #555;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s ease;
 }
 
-/* Efek saat mouse diarahkan ke menu */
 .nav-links a:hover {
     color: #000;
     border-bottom: 1px solid #000; /* Garis bawah tipis saat hover */
