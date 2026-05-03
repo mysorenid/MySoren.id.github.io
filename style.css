@@ -1,13 +1,11 @@
-/* --- Reset & Global --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #C3B091;
-    overflow-x: hidden;
 }
 
-/* --- Navbar (Logo Kiri, Menu Kanan) --- */
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -19,117 +17,27 @@ body {
     z-index: 1000;
 }
 
-.logo a {
-    color: #f5f5dc;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 23px;
-    letter-spacing: 2px;
-}
+.logo a { color: #f5f5dc; text-decoration: none; font-weight: bold; font-size: 23px; letter-spacing: 2px; }
 
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
+.nav-links { display: flex; list-style: none; gap: 20px; }
+.nav-links a { color: white; text-decoration: none; font-weight: bold; }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* --- Hero / Top About Section --- */
-.hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 80vh;
-    background-color: #f5f5dc;
-    padding: 0 20px;
-}
-
-.hero h1 {
-    font-size: 80px;
-    letter-spacing: 20px;
-    margin-bottom: 20px;
-    color: #756a57;
-}
-
-.hero p {
-    font-size: 18px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    max-width: 600px;
-}
-
-/* --- Kategori Belanja (Rapat Kiri) --- */
-.category-section {
-    padding: 60px 50px;
-    background-color: #756a57; /* Warna latar belanja agar kontras */
-}
-
-.category-section h2 {
-    color: #f5f5dc;
-    margin-bottom: 30px;
-    letter-spacing: 5px;
-}
-
-.category-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start; /* PAKSA KE KIRI */
-    gap: 25px;
-}
-
-.category-card {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    width: 300px;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.category-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.btn-shop {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #756a57;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-/* --- About Me Slider (3 Slides) --- */
+/* About Slider - INI YANG MEMPERBAIKI MASALAHMU */
 .about-slider-container {
     padding: 100px 20px;
     background-color: #f5f5dc;
     text-align: center;
-    position: relative;
     min-height: 450px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    position: relative;
 }
 
 .about-slide {
-    display: none; /* Sembunyikan semua awal */
+    display: none; /* Sembunyikan semua slide secara default */
     animation: fadeEffect 0.8s;
 }
 
 .about-slide.active {
-    display: block; /* Hanya tampilkan yang aktif */
+    display: block; /* Hanya tampilkan slide yang ada class 'active' */
 }
 
 @keyframes fadeEffect {
@@ -137,36 +45,20 @@ body {
     to { opacity: 1; }
 }
 
-.about-content h2 {
-    font-size: 28px;
-    letter-spacing: 8px;
-    color: #756a57;
-    margin-bottom: 20px;
-}
+.about-line { width: 50px; height: 2px; background: #756a57; margin: 0 auto 20px; }
+.about-slide h2 { letter-spacing: 8px; color: #756a57; margin-bottom: 15px; text-transform: uppercase; }
+.about-slide p { font-size: 18px; max-width: 700px; margin: 0 auto 20px; font-style: italic; line-height: 1.6; }
+.signature { font-weight: bold; letter-spacing: 3px; color: #756a57; font-size: 14px; }
 
-.about-content p {
-    font-size: 18px;
-    line-height: 1.8;
-    max-width: 700px;
-    margin: 0 auto;
-    font-style: italic;
-}
+/* Dots */
+.about-dots { margin-top: 30px; }
+.dot-a { height: 12px; width: 12px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block; cursor: pointer; transition: 0.3s; }
+.dot-a.active { background-color: #756a57; transform: scale(1.2); }
 
-/* Navigasi Dots About */
-.about-dots {
-    margin-top: 30px;
-}
-
-.dot-a {
-    height: 12px;
-    width: 12px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.dot-a.active {
-    background-color: #756a57;
-}
+/* Kategori Belanja (Rapat Kiri) */
+.category-section { padding: 60px 50px; }
+.category-section h2 { margin-bottom: 30px; letter-spacing: 3px; }
+.category-grid { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 25px; }
+.category-card { background: white; padding: 20px; border-radius: 12px; width: 300px; text-align: center; }
+.category-card img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
+.btn-shop { display: inline-block; padding: 10px 20px; background-color: #756a57; color: white; text-decoration: none; border-radius: 5px; }
