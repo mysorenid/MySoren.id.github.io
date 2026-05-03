@@ -65,3 +65,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// --- LOGIKA SEARCH BAR ---
+const searchInput = document.querySelector('.search-input');
+
+if (searchInput) {
+    searchInput.addEventListener('input', function() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const allProducts = document.querySelectorAll('.product-card');
+
+        allProducts.forEach(product => {
+            // Mengambil teks dari Judul Produk (h3)
+            const productName = product.querySelector('h3').innerText.toLowerCase();
+            
+            // Jika nama produk mengandung kata yang diketik, tampilkan. Jika tidak, sembunyikan.
+            if (productName.includes(searchTerm)) {
+                product.style.display = "block";
+            } else {
+                product.style.display = "none";
+            }
+        });
+    });
+}
+
+const searchBtn = document.querySelector('.search-btn');
+if (searchBtn) {
+    searchBtn.addEventListener('click', () => {
+        searchInput.focus(); // Fokus ke kotak ketik saat ikon diklik
+    });
+}
