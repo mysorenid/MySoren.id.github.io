@@ -529,24 +529,23 @@ footer {
 
 /* POPUP BOX */
 .filter-popup {
-    display: none; /* Tersembunyi dulu */
+    display: none; /* Harus tersembunyi di awal */
     position: absolute;
-    top: 40px;
+    top: 45px;
     left: 0;
     background: #fff;
     border: 1px solid #eee;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     padding: 20px;
-    width: 450px; /* Lebar pop up */
-    z-index: 2000;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Bagi 3 kolom: Ukuran, Bahan, Gaya */
-    gap: 20px;
+    width: 450px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    z-index: 100;
 }
 
-/* Munculkan saat class 'show' ditambah via JS */
+/* Class ini akan ditambah/dihapus otomatis oleh JavaScript */
 .filter-popup.show {
-    display: grid;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .filter-group h4 {
