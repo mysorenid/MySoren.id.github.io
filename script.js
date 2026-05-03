@@ -75,3 +75,32 @@ if (filterBtn) {
         }
     });
 }
+
+
+// --- LOGIKA FILTER POP-UP ---
+const filterBtn = document.getElementById('filterBtn');
+const filterPopup = document.getElementById('filterPopup');
+const applyBtn = document.getElementById('applyFilter');
+
+if (filterBtn && filterPopup) {
+    // 1. Klik tombol Filter untuk buka/tutup
+    filterBtn.addEventListener('click', function(e) {
+        e.stopPropagation(); // Biar nggak langsung ketutup pas diklik
+        filterPopup.classList.toggle('show');
+    });
+
+    // 2. Klik tombol "Terapkan" untuk tutup filter
+    if (applyBtn) {
+        applyBtn.addEventListener('click', function() {
+            filterPopup.classList.remove('show');
+        });
+    }
+
+    // 3. Klik di mana saja di luar filter untuk menutup
+    document.addEventListener('click', function(e) {
+        if (!filterPopup.contains(e.target) && e.target !== filterBtn) {
+            filterPopup.classList.remove('show');
+        }
+    });
+}
+
