@@ -39,3 +39,21 @@ let autoPlay = setInterval(moveNext, 3000);
 // Berhenti auto-play kalau mouse ada di atas slider (biar pengunjung bisa liat produk)
 track.parentElement.addEventListener('mouseenter', () => clearInterval(autoPlay));
 track.parentElement.addEventListener('mouseleave', () => autoPlay = setInterval(moveNext, 3000));
+
+// --- AUTO SLIDER UNTUK HERO SECTION (ABOUT) ---
+const mainSlides = document.querySelectorAll('.main-slide');
+const dots = document.querySelectorAll('.dot');
+let currentSlide = 0;
+
+function nextMainSlide() {
+    mainSlides[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+    
+    currentSlide = (currentSlide + 1) % mainSlides.length;
+    
+    mainSlides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+}
+
+// Ganti slide setiap 5 detik
+setInterval(nextMainSlide, 5000);
