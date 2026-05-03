@@ -437,12 +437,20 @@ footer {
     letter-spacing: 1px;
 }
 
-/* Update Grid untuk 3 Pakaian per Baris */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Mengubah dari 4 menjadi 3 kolom */
-    gap: 40px 25px; /* Memberi jarak lebih lebar agar tidak sesak */
-    padding: 20px 5% 80px;
+    /* Kunci baris menjadi 3 kolom yang sama rata */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; /* Jarak antar produk */
+    padding: 20px 5%;
+    /* Tambahkan ini agar produk tidak melebar paksa */
+    align-items: start; 
+}
+
+.product-card {
+    /* Pastikan lebar produk tidak otomatis memenuhi sisa ruang */
+    width: 100%; 
+    max-width: 100%;
 }
 
 /* Penyesuaian untuk tampilan HP (Tetap 2 kolom agar tidak terlalu kecil) */
