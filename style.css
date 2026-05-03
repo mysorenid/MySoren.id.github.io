@@ -445,3 +445,78 @@ footer {
         text-align: center;
     }
 }
+
+/* STYLING NAVIGASI BAJU.HTML */
+.product-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.divider {
+    margin: 0 20px;
+    color: #ddd;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: #555;
+    font-weight: 600;
+}
+
+.nav-btn:hover {
+    color: #000;
+}
+
+/* SEARCH BAR */
+.nav-right {
+    flex: 0 1 300px; /* Lebar maksimal search bar */
+}
+
+.search-container {
+    display: flex;
+    border: 1px solid #eee;
+    padding: 5px 15px;
+    border-radius: 20px; /* Membuat lonjong minimalis */
+    background: #f9f9f9;
+}
+
+.search-input {
+    border: none;
+    background: none;
+    outline: none;
+    width: 100%;
+    font-size: 13px;
+    color: #333;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Responsif HP */
+@media (max-width: 768px) {
+    .divider { margin: 0 10px; }
+    .nav-right { flex: 0 1 150px; }
+}
