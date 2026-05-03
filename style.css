@@ -235,17 +235,23 @@ display: grid;
     overflow: hidden;
 }
 
-.produk-img {
+.product-img {
     width: 100%;
-    aspect-ratio: 1/1; /* Kotak persegi sempurna */
+    /* Kunci aspek rasio 3:4 (Portrait Elegan) */
+    aspect-ratio: 3 / 4; 
+    background: #f7f7f7; /* Warna latar jika gambar loading */
+    overflow: hidden; /* Potong gambar jika melebihi kotak */
     position: relative;
+    margin-bottom: 15px;
 }
 
 .produk-img img {
-    width: 100%;
+width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+    /* PENTING: Gambar dipotong rapi memenuhi kotak, tidak gepeng */
+    object-fit: cover; 
+    display: block;
+    transition: transform 0.6s ease; /* Efek zoom saat hover */
 }
 
 /* Responsif untuk HP */
