@@ -219,9 +219,13 @@ nav {
 }
 
 .produk-container {
-    display: flex; /* Membuat berjejer ke samping */
-    gap: 20px;
-    justify-content: center;
+display: grid;
+    /* Ini kuncinya: Membagi menjadi 3 kolom yang sama lebar */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; /* Jarak antar produk */
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .produk-card {
@@ -246,9 +250,9 @@ nav {
 
 /* Responsif untuk HP */
 @media (max-width: 768px) {
-    .product-track .product-card {
-        flex: 0 0 200px; /* Lebih kecil sedikit di HP */
-    }
+    .produk-card {
+    width: 100%;
+    text-decoration: none;
 }
 
 .product-info h3 {
